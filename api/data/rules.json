@@ -166,5 +166,17 @@
     "effective_from": "2026-01-01T00:00:00.000Z",
     "effective_to": "2026-12-31T23:59:59.000Z",
     "is_active": false
+  },
+  {
+    "id": 15,
+    "type": "WeightTier",
+    "name": "Weight tier Q4 bump",
+    "method": "surcharge",
+    "type_value": "percent",
+    "value": 5,
+    "priority": 85,
+    "effective_from": "2026-10-01T00:00:00.000Z",
+    "effective_to": "2026-12-31T23:59:59.000Z",
+    "is_active": true
   }
 ]

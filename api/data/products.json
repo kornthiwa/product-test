@@ -19,5 +19,89 @@
     "price": 35,
     "weight": 0.2,
     "is_active": true
+  },
+  {
+    "id": "SKU-004",
+    "name": "Small padded mailer",
+    "price": 45,
+    "weight": 0.15,
+    "is_active": true
+  },
+  {
+    "id": "SKU-005",
+    "name": "Medium shipping box",
+    "price": 220,
+    "weight": 5,
+    "is_active": true
+  },
+  {
+    "id": "SKU-006",
+    "name": "Large shipping box",
+    "price": 380,
+    "weight": 12,
+    "is_active": true
+  },
+  {
+    "id": "SKU-007",
+    "name": "Insulated food box",
+    "price": 520,
+    "weight": 8,
+    "is_active": true
+  },
+  {
+    "id": "SKU-008",
+    "name": "Tube poster mailer",
+    "price": 95,
+    "weight": 1.2,
+    "is_active": true
+  },
+  {
+    "id": "SKU-009",
+    "name": "Fragile glass kit",
+    "price": 640,
+    "weight": 6.5,
+    "is_active": true
+  },
+  {
+    "id": "SKU-010",
+    "name": "Pallet half-load",
+    "price": 1200,
+    "weight": 180,
+    "is_active": true
+  },
+  {
+    "id": "SKU-011",
+    "name": "Express satchel",
+    "price": 75,
+    "weight": 0.5,
+    "is_active": true
+  },
+  {
+    "id": "SKU-012",
+    "name": "Bulk sack 25kg",
+    "price": 410,
+    "weight": 25,
+    "is_active": true
+  },
+  {
+    "id": "SKU-013",
+    "name": "Electronics anti-static box",
+    "price": 290,
+    "weight": 3,
+    "is_active": true
+  },
+  {
+    "id": "SKU-014",
+    "name": "Oversize furniture wrap",
+    "price": 1500,
+    "weight": 95,
+    "is_active": true
+  },
+  {
+    "id": "SKU-015",
+    "name": "Return label bundle",
+    "price": 25,
+    "weight": 0.05,
+    "is_active": true
   }
 ]

@@ -16,7 +16,7 @@ export enum RuleTypeValueEnum {
   AMOUNT = 'amount',
 }
 
-@Schema({ timestamps: true, collection: 'pricing_rules' })
+@Schema({ timestamps: true, collection: 'rules' })
 export class Rule {
   @Prop({ required: true, unique: true, index: true })
   id!: number;

@@ -30,7 +30,7 @@ describe('RulesController', () => {
     rulesService.findAllList.mockResolvedValue({
       page: 1,
       pageSize: 10,
-      total: 14,
+      total: 15,
       data: [{ id: 1 }],
     });
 
@@ -41,7 +41,7 @@ describe('RulesController', () => {
     expect(result).toEqual({
       page: 1,
       pageSize: 10,
-      total: 14,
+      total: 15,
       data: [{ id: 1 }],
     });
   });
