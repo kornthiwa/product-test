@@ -8,32 +8,18 @@ export type JobStatus = 'queued' | 'processing' | 'completed' | 'failed';
 export type JobItemStatus = 'success' | 'failed';
 
 @Schema({ _id: false })
-export class Product {
-  @Prop({ required: true })
-  id!: string;
-
-  @Prop({ required: true, description: 'ชื่อของสินค้า' })
-  name!: string;
-
-  @Prop({ required: true, min: 0, description: 'ราคาของสินค้า' })
-  price!: number;
-
-  @Prop({ required: true, min: 1, description: 'จำนวนของสินค้า' })
-  quantity!: number;
-
-  @Prop({ required: true, min: 0, description: 'น้ำหนักของสินค้า' })
-  weight!: number;
-}
-
-const ProductSchema = SchemaFactory.createForClass(Product);
-
-@Schema({ _id: false })
 export class JobItem {
   @Prop({ required: true, min: 0, description: 'ลำดับของคำขอ' })
   index!: number;
 
-  @Prop({ required: true, type: ProductSchema, description: 'ข้อมูลของคำขอ' })
-  product!: Product;
+  @Prop({
+    required: true,
+    description: 'รหัสอ้างอิงสินค้า (Product.id)',
+  })
+  productId!: string;
+
+  @Prop({ required: true, min: 1, description: 'จำนวนของสินค้าในรายการนี้' })
+  quantity!: number;
 
   @Prop({
     required: true,

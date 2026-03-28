@@ -7,6 +7,7 @@ import { RulesModule } from './modules/rules/rules.module';
 import { QuotesModule } from './modules/quotes/quotes.module';
 import { JobsModule } from './modules/jobs/jobs.module';
 import { RedisModule } from './shared/redis/redis.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @Module({
   imports: [
@@ -26,6 +27,7 @@ import { RedisModule } from './shared/redis/redis.module';
     RulesModule,
     QuotesModule,
     JobsModule,
+    ProductsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

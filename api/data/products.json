@@ -1,0 +1,23 @@
+[
+  {
+    "id": "SKU-001",
+    "name": "Standard parcel box",
+    "price": 150,
+    "weight": 2.5,
+    "is_active": true
+  },
+  {
+    "id": "SKU-002",
+    "name": "Heavy freight crate",
+    "price": 890,
+    "weight": 45,
+    "is_active": true
+  },
+  {
+    "id": "SKU-003",
+    "name": "Document envelope",
+    "price": 35,
+    "weight": 0.2,
+    "is_active": true
+  }
+]
