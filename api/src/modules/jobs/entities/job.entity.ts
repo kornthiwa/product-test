@@ -1,11 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument, Types } from 'mongoose';
-import { Rule } from '../../rules/entities/rule.entity';
+import { HydratedDocument } from 'mongoose';
 
 export type JobDocument = HydratedDocument<Job>;
 
 export type JobStatus = 'queued' | 'processing' | 'completed' | 'failed';
-export type JobItemStatus = 'success' | 'failed';
+export type JobItemStatus = 'pending' | 'success' | 'failed';
 
 @Schema({ _id: false })
 export class JobItem {
@@ -23,8 +22,9 @@ export class JobItem {
 
   @Prop({
     required: true,
-    enum: ['success', 'failed'],
-    description: 'สถานะของงาน',
+    enum: ['pending', 'success', 'failed'],
+    default: 'pending',
+    description: 'สถานะของรายการในงาน',
   })
   status!: JobItemStatus;
 
@@ -32,12 +32,11 @@ export class JobItem {
   finalPrice?: number;
 
   @Prop({
-    type: [Types.ObjectId],
-    ref: Rule.name,
+    type: [Number],
     default: [],
-    description: 'กฎที่ใช้ในการคำนวณราคา',
+    description: 'รหัสกฎ (Rule.id) ที่ใช้ในการคำนวณราคา',
   })
-  appliedRules?: Types.ObjectId[];
+  appliedRules?: number[];
 }
 
 const JobItemSchema = SchemaFactory.createForClass(JobItem);
@@ -72,6 +71,14 @@ export class Job {
 
   @Prop({ type: [JobItemSchema], default: [] })
   items!: JobItem[];
+
+  @Prop({
+    required: true,
+    index: true,
+    default: true,
+    description: 'สถานะการใช้งานของงาน',
+  })
+  is_active!: boolean;
 }
 
 export const JobSchema = SchemaFactory.createForClass(Job);

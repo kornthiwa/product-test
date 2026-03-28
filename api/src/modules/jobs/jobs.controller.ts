@@ -1,34 +1,57 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  Query,
+} from '@nestjs/common';
 import { JobsService } from './jobs.service';
 import { CreateJobDto } from './dto/create-job.dto';
+import { GetListJobDto, GetJobListResponse } from './dto/get-job.dto';
 import { UpdateJobDto } from './dto/update-job.dto';
+import { Job } from './entities/job.entity';
 
 @Controller('jobs')
 export class JobsController {
   constructor(private readonly jobsService: JobsService) {}
 
   @Post()
-  create(@Body() createJobDto: CreateJobDto) {
-    return this.jobsService.create(createJobDto);
+  async create(@Body() createJobDto: CreateJobDto): Promise<Job> {
+    return await this.jobsService.create(createJobDto);
   }
 
   @Get()
-  findAll() {
-    return this.jobsService.findAll();
+  async findAllList(
+    @Query() dto: GetListJobDto,
+  ): Promise<GetJobListResponse> {
+    return await this.jobsService.findAllList(dto);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.jobsService.findOne(+id);
+  @Get('syncjson')
+  async syncJson(): Promise<{ message: string }> {
+    await this.jobsService.syncJsonData();
+    return { message: 'Synced JSON data successfully' };
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateJobDto: UpdateJobDto) {
-    return this.jobsService.update(+id, updateJobDto);
+  @Get(':jobId')
+  async findOne(@Param('jobId') jobId: string): Promise<Job> {
+    return await this.jobsService.findOne(jobId);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.jobsService.remove(+id);
+  @Patch(':jobId')
+  async update(
+    @Param('jobId') jobId: string,
+    @Body() updateJobDto: UpdateJobDto,
+  ): Promise<Job> {
+    return await this.jobsService.update(jobId, updateJobDto);
+  }
+
+  @Delete(':jobId')
+  async remove(@Param('jobId') jobId: string): Promise<Job> {
+    const job = await this.jobsService.remove(jobId);
+    return job;
   }
 }

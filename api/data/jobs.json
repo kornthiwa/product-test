@@ -1,0 +1,78 @@
+[
+  {
+    "jobId": "1",
+    "is_active": true,
+    "status": "completed",
+    "total": 2,
+    "processed": 2,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 2,
+        "status": "success",
+        "finalPrice": 300,
+        "appliedRules": [1, 5]
+      },
+      {
+        "index": 1,
+        "productId": "SKU-003",
+        "quantity": 5,
+        "status": "success",
+        "finalPrice": 175,
+        "appliedRules": [2]
+      }
+    ]
+  },
+  {
+    "jobId": "2",
+    "is_active": true,
+    "status": "queued",
+    "total": 1,
+    "processed": 0,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "3",
+    "is_active": true,
+    "status": "processing",
+    "total": 1,
+    "processed": 0,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [1]
+      }
+    ]
+  },
+  {
+    "jobId": "4",
+    "is_active": true,
+    "status": "failed",
+    "total": 1,
+    "processed": 1,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 3,
+        "status": "failed",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  }
+]
