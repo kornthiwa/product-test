@@ -1,6 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
+import { Model, QueryFilter } from 'mongoose';
 import { CreateRuleDto } from './dto/create-rule.dto';
 import { UpdateRuleDto } from './dto/update-rule.dto';
 import { Rule, RuleDocument } from './entities/rule.entity';
@@ -16,6 +16,10 @@ export class RulesService {
     @InjectModel(Rule.name) private readonly ruleModel: Model<RuleDocument>,
     private readonly redisService: RedisService,
   ) {}
+
+  async findWithQuery(query: QueryFilter<RuleDocument>): Promise<Rule[]> {
+    return this.ruleModel.find(query).sort({ jobId: 1 }).lean();
+  }
 
   async findAllList(dto: GetListRuleDto): Promise<GetRuleDtoResponse> {
     const { page = 1, pageSize = 10 } = dto;

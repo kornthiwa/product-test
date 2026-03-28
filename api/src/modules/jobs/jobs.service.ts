@@ -4,7 +4,7 @@ import {
   NotFoundException,
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { Model, Types } from 'mongoose';
+import { Model, QueryFilter } from 'mongoose';
 import { randomUUID } from 'crypto';
 import { CreateJobDto } from './dto/create-job.dto';
 import { GetListJobDto, GetJobListResponse } from './dto/get-job.dto';
@@ -21,6 +21,10 @@ export class JobsService {
     @InjectModel(Job.name) private readonly jobModel: Model<JobDocument>,
     private readonly redisService: RedisService,
   ) {}
+
+  async findWithQuery(query: QueryFilter<JobDocument>): Promise<Job[]> {
+    return this.jobModel.find(query).lean();
+  }
 
   async findAllList(dto: GetListJobDto): Promise<GetJobListResponse> {
     const { page = 1, pageSize = 10 } = dto;

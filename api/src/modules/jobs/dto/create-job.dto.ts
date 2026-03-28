@@ -66,4 +66,10 @@ export class CreateJobDto {
   @IsOptional()
   @IsBoolean()
   is_active?: boolean;
+
+  @IsOptional()
+  @Type(() => Number)
+  @IsInt()
+  @Min(0)
+  processed?: number;
 }

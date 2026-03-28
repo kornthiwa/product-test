@@ -12,5 +12,6 @@ import { RedisModule } from '../../shared/redis/redis.module';
   ],
   controllers: [RulesController],
   providers: [RulesService],
+  exports: [RulesService],
 })
 export class RulesModule {}
