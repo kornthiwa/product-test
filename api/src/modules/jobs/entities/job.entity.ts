@@ -49,7 +49,7 @@ export class Job {
     index: true,
     description: 'รหัสของงาน',
   })
-  jobId!: string;
+  jobId!: number;
 
   @Prop({
     required: true,

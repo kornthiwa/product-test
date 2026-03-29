@@ -161,7 +161,7 @@ describe('JobsService', () => {
       is_active: true,
     });
 
-    await expect(service.findOne('1')).resolves.toMatchObject({ jobId: '1' });
+    await expect(service.findOne(1)).resolves.toMatchObject({ jobId: 1 });
     expect(redisService.getJson).toHaveBeenCalledWith('jobs:one:v1:1');
     expect(jobModel.findOne).not.toHaveBeenCalled();
   });
@@ -177,12 +177,12 @@ describe('JobsService', () => {
     });
     jobModel.findOne.mockReturnValue(chain);
 
-    const job = await service.findOne('1');
-    expect(job).toMatchObject({ jobId: '1' });
-    expect(jobModel.findOne).toHaveBeenCalledWith({ jobId: '1' });
+    const job = await service.findOne(1);
+    expect(job).toMatchObject({ jobId: 1 });
+    expect(jobModel.findOne).toHaveBeenCalledWith({ jobId: 1 });
     expect(redisService.setJson).toHaveBeenCalledWith(
       'jobs:one:v1:1',
-      expect.objectContaining({ jobId: '1' }),
+      expect.objectContaining({ jobId: 1 }),
       30,
     );
   });
@@ -192,9 +192,7 @@ describe('JobsService', () => {
     redisService.getJson.mockResolvedValue(null);
     const chain = createQueryChain(null);
     jobModel.findOne.mockReturnValue(chain);
-    await expect(service.findOne('missing')).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(service.findOne(1)).rejects.toBeInstanceOf(NotFoundException);
   });
 
   it('create() should price lines via engine and persist completed job', async () => {
@@ -357,10 +355,10 @@ describe('JobsService', () => {
     jobModel.findOneAndUpdate.mockReturnValue(chain);
 
     await expect(
-      service.update('1', { status: 'completed' } as UpdateJobDto),
-    ).resolves.toMatchObject({ jobId: '1', status: 'completed' });
+      service.update(1, { status: 'completed' } as UpdateJobDto),
+    ).resolves.toMatchObject({ jobId: 1, status: 'completed' });
     expect(jobModel.findOneAndUpdate).toHaveBeenCalledWith(
-      { jobId: '1' },
+      { jobId: 1 },
       { status: 'completed' },
       { new: true },
     );
@@ -371,7 +369,7 @@ describe('JobsService', () => {
     const chain = createQueryChain(null);
     jobModel.findOneAndUpdate.mockReturnValue(chain);
     await expect(
-      service.update('missing', { status: 'completed' } as UpdateJobDto),
+      service.update(1, { status: 'completed' } as UpdateJobDto),
     ).rejects.toBeInstanceOf(NotFoundException);
   });
 
@@ -382,12 +380,12 @@ describe('JobsService', () => {
     });
     jobModel.findOneAndUpdate.mockReturnValue(chain);
 
-    await expect(service.remove('1')).resolves.toMatchObject({
-      jobId: '1',
+    await expect(service.remove(1)).resolves.toMatchObject({
+      jobId: 1,
       is_active: false,
     });
     expect(jobModel.findOneAndUpdate).toHaveBeenCalledWith(
-      { jobId: '1' },
+      { jobId: 1 },
       { is_active: false },
       { new: true },
     );
@@ -397,9 +395,7 @@ describe('JobsService', () => {
   it('remove() should throw NotFoundException when missing', async () => {
     const chain = createQueryChain(null);
     jobModel.findOneAndUpdate.mockReturnValue(chain);
-    await expect(service.remove('missing')).rejects.toBeInstanceOf(
-      NotFoundException,
-    );
+    await expect(service.remove(1)).rejects.toBeInstanceOf(NotFoundException);
   });
 
   it('syncJsonData() should bump cache only when json array is empty', async () => {
@@ -414,7 +410,7 @@ describe('JobsService', () => {
   it('syncJsonData() should read json file, bulkWrite (upsert), and bump cache version', async () => {
     const rows = [
       {
-        jobId: '1',
+        jobId: 1,
         status: 'completed',
         items: [
           {
@@ -450,7 +446,7 @@ describe('JobsService', () => {
       [
         {
           updateOne: {
-            filter: { jobId: '1' },
+            filter: { jobId: 1 },
             update: {
               $set: expect.objectContaining({
                 jobId: '1',

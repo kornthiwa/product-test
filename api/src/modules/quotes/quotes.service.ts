@@ -4,12 +4,16 @@ import { ProductsService } from '../products/products.service';
 import { RulesService } from '../rules/rules.service';
 import { PriceQuoteDto, PriceQuoteResponse } from './dto/price-quote.dto';
 import { computePriceLine, roundMoney } from './quote-pricing';
+import { BulkQuoteDtoResponse } from './dto/bulk-quote.dto';
+import { JobsService } from '../jobs/jobs.service';
+import { Job } from '../jobs/entities/job.entity';
 
 @Injectable()
 export class QuotesService {
   constructor(
     private readonly rules: RulesService,
     private readonly products: ProductsService,
+    private readonly jobs: JobsService,
   ) {}
 
   async computePriceQuote(dto: PriceQuoteDto): Promise<PriceQuoteResponse> {
@@ -60,5 +64,26 @@ export class QuotesService {
       summaryPrice: roundMoney(summary),
       items,
     };
+  }
+
+  async bulkQuotes(data: Job[]): Promise<BulkQuoteDtoResponse> {
+    const quotes: BulkQuoteDtoResponse['data'] = [];
+    for (const job of data) {
+      const quote = await this.jobs.create({
+        is_active: job.is_active,
+        status: job.status,
+        distanceKm: job.distanceKm,
+        items: job.items.map((item) => ({
+          index: item.index,
+          productId: item.productId,
+          quantity: item.quantity,
+          status: item.status,
+          finalPrice: item.finalPrice,
+          appliedRules: item.appliedRules,
+        })),
+      });
+      quotes.push(quote);
+    }
+    return { data: quotes };
   }
 }

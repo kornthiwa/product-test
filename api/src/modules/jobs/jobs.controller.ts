@@ -35,20 +35,20 @@ export class JobsController {
   }
 
   @Get(':jobId')
-  async findOne(@Param('jobId') jobId: string): Promise<Job> {
+  async findOne(@Param('jobId') jobId: number): Promise<Job> {
     return await this.jobsService.findOne(jobId);
   }
 
   @Patch(':jobId')
   async update(
-    @Param('jobId') jobId: string,
+    @Param('jobId') jobId: number,
     @Body() updateJobDto: UpdateJobDto,
   ): Promise<Job> {
     return await this.jobsService.update(jobId, updateJobDto);
   }
 
   @Delete(':jobId')
-  async remove(@Param('jobId') jobId: string): Promise<Job> {
+  async remove(@Param('jobId') jobId: number): Promise<Job> {
     const job = await this.jobsService.remove(jobId);
     return job;
   }

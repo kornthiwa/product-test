@@ -1,7 +1,7 @@
 {
   "info": {
     "name": "Pricing Platform API",
-    "description": "NestJS pricing rules, quotes, jobs, and products.\n\n**Setup:** Start API (`yarn start:dev` or Docker). Run **Rules → Sync from JSON** and **Products → Sync from JSON** (and **Jobs → Sync from JSON** if you need seed jobs) before pricing calls.\n\nOptional header `X-Correlation-Id` (any string) for request tracing if your server supports it.",
+    "description": "NestJS pricing rules, quotes, jobs, and products.\n\n**Setup:** Start API (`yarn start:dev` or Docker). Run **Rules → Sync from JSON** and **Products → Sync from JSON** before `quotes/price` and `quotes/bulk`. Optional: **Jobs → Sync from JSON** to seed `data/jobs.json`.\n\n**Bulk upload:** `POST /quotes/bulk` uses **form-data** key **`file`**. Send either:\n- **CSV** — header `request_id`, `product_id`, `quantity` (optional: `item_index`, `distance_km`). Sample: `api/data/bulk_quotes.csv`.\n- **JSON** — array of job-like objects, or `{ \"data\": [ ... ] }`. Sample: `api/data/jobs-bulk-test-500.json` (root array).\n\n**Jobs:** `jobId` in URLs is a **number** (from create/bulk response).",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
   "variable": [
@@ -11,7 +11,7 @@
     },
     {
       "key": "jobId",
-      "value": "postman-demo-job"
+      "value": "1"
     },
     {
       "key": "ruleId",
@@ -220,6 +220,27 @@
             "description": "Instant quote. Each line: `productId`, `quantity` (required); optional `distanceKm` per line for remote surcharges. Optional top-level `quoteAt` (ISO date string)."
           },
           "response": []
+        },
+        {
+          "name": "POST Bulk quotes (file upload)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "file",
+                  "description": "Select `api/data/bulk_quotes.csv` OR `api/data/jobs-bulk-test-500.json` (or any CSV/JSON matching the API parser).",
+                  "type": "file",
+                  "src": []
+                }
+              ]
+            },
+            "url": "{{baseUrl}}/quotes/bulk",
+            "description": "Multipart **form-data** only; field name must be **`file`**.\n\n**CSV:** columns `request_id`, `product_id`, `quantity`; optional `item_index`, `distance_km`. Rows with the same `request_id` become one priced job.\n\n**JSON:** top-level **array** of jobs, or `{ \"data\": [ ... ] }`. Each job needs `items[]` with `productId`, `quantity` (and optional fields).\n\nResponse: `{ \"data\": [ Job, ... ] }` — each persisted job includes numeric `jobId`."
+          },
+          "response": []
         }
       ]
     },
@@ -257,10 +278,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"jobId\": \"{{jobId}}\",\n  \"distanceKm\": 75,\n  \"items\": [\n    { \"productId\": \"SKU-001\", \"quantity\": 2 },\n    { \"productId\": \"SKU-003\", \"quantity\": 1 }\n  ]\n}\n"
+              "raw": "{\n  \"distanceKm\": 75,\n  \"items\": [\n    { \"productId\": \"SKU-001\", \"quantity\": 2 },\n    { \"productId\": \"SKU-003\", \"quantity\": 1 }\n  ]\n}\n"
             },
             "url": "{{baseUrl}}/jobs",
-            "description": "Required: `items[]` with `productId`, `quantity`. Optional: `jobId` (server generates UUID if omitted), `distanceKm` (job-level for pricing), `status`, `is_active`."
+            "description": "Required: `items[]` with `productId`, `quantity`. Optional: `distanceKm` (applies to all lines when pricing), `is_active`. Server assigns numeric `jobId` and returns priced `items` (`status` completed)."
           },
           "response": []
         },
@@ -269,7 +290,8 @@
           "request": {
             "method": "GET",
             "header": [],
-            "url": "{{baseUrl}}/jobs/{{jobId}}"
+            "url": "{{baseUrl}}/jobs/{{jobId}}",
+            "description": "`jobId` is a **number** (set collection variable from **Create job** or **Bulk quotes** response)."
           },
           "response": []
         },

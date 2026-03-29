@@ -1,0 +1,7586 @@
+[
+  {
+    "jobId": "bulk-0001",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 10,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 100,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0002",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0003",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0004",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0005",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 104,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0006",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0007",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 16,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0008",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0009",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 108,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0010",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0011",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0012",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0013",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 22,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 112,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0014",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0015",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0016",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0017",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 116,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0018",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0019",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 28,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0020",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0021",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 120,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0022",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0023",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0024",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0025",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 34,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 124,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0026",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0027",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0028",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0029",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 128,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0030",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0031",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 40,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0032",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0033",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 132,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0034",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0035",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0036",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0037",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 46,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 136,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0038",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0039",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0040",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0041",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 140,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0042",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0043",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 52,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0044",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0045",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 144,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0046",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0047",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0048",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0049",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 58,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 148,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0050",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0051",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0052",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0053",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 152,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0054",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0055",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 64,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0056",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0057",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 156,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0058",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0059",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0060",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0061",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 70,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 160,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0062",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0063",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0064",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0065",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 164,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0066",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0067",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 76,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0068",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0069",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 168,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0070",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0071",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0072",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0073",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 82,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 172,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0074",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0075",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0076",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0077",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 176,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0078",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0079",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 88,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0080",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0081",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 180,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0082",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0083",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0084",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0085",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 94,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 184,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0086",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0087",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0088",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0089",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 188,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0090",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0091",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 100,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0092",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0093",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 192,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0094",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0095",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0096",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0097",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 106,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 196,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0098",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0099",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0100",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0101",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 200,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0102",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0103",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 112,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0104",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0105",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 204,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0106",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0107",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0108",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0109",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 118,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 208,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0110",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0111",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0112",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0113",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 212,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0114",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0115",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 124,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0116",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0117",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 216,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0118",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0119",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0120",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0121",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 130,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 220,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0122",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0123",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0124",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0125",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 224,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0126",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0127",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 136,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0128",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0129",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 228,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0130",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0131",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0132",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0133",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 142,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 232,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0134",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0135",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0136",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0137",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 236,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0138",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0139",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 148,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0140",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0141",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 240,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0142",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0143",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0144",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0145",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 154,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 244,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0146",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0147",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0148",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0149",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 248,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0150",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0151",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 10,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0152",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0153",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 252,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0154",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0155",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0156",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0157",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 16,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 256,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0158",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0159",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0160",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0161",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 260,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0162",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0163",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 22,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0164",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0165",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 264,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0166",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0167",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0168",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0169",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 28,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 268,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0170",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0171",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0172",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0173",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 272,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0174",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0175",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 34,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0176",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0177",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 276,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0178",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0179",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0180",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0181",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 40,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 280,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0182",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0183",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0184",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0185",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 284,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0186",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0187",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 46,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0188",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0189",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 288,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0190",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0191",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0192",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0193",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 52,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 292,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0194",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0195",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0196",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0197",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 296,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0198",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0199",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 58,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0200",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0201",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 300,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0202",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0203",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0204",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0205",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 64,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 304,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0206",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0207",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0208",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0209",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 308,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0210",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0211",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 70,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0212",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0213",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 312,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0214",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0215",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0216",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0217",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 76,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 316,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0218",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0219",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0220",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0221",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 320,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0222",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0223",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 82,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0224",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0225",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 324,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0226",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0227",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0228",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0229",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 88,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 328,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0230",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0231",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0232",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0233",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 332,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0234",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0235",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 94,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0236",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0237",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 336,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0238",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0239",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0240",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0241",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 100,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 340,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0242",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0243",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0244",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0245",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 344,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0246",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0247",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 106,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0248",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0249",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 348,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0250",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0251",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0252",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0253",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 112,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 352,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0254",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0255",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0256",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0257",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 356,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0258",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0259",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 118,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0260",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0261",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 360,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0262",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0263",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0264",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0265",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 124,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 364,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0266",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0267",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0268",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0269",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 368,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0270",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0271",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 130,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0272",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0273",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 372,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0274",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0275",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0276",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0277",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 136,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 376,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0278",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0279",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0280",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0281",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 380,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0282",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0283",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 142,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0284",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0285",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 384,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0286",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0287",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0288",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0289",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 148,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 388,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0290",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0291",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0292",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0293",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 392,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0294",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0295",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 154,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0296",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0297",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 396,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0298",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0299",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0300",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0301",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 10,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 400,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0302",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0303",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0304",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0305",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 404,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0306",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0307",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 16,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0308",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0309",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 408,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0310",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0311",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0312",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0313",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 22,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 412,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0314",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0315",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0316",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0317",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 416,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0318",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0319",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 28,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0320",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0321",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 420,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0322",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0323",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0324",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0325",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 34,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 424,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0326",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0327",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0328",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0329",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 428,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0330",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0331",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 40,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0332",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0333",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 432,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0334",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0335",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0336",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0337",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 46,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 436,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0338",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0339",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0340",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0341",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 440,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0342",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0343",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 52,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0344",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0345",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 444,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0346",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0347",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0348",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0349",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 58,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 448,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0350",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0351",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0352",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0353",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 452,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0354",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0355",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 64,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0356",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0357",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 456,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0358",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0359",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0360",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0361",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 70,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 460,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0362",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0363",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0364",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0365",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 464,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0366",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0367",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 76,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0368",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0369",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 468,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0370",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0371",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0372",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0373",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 82,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 472,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0374",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0375",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0376",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0377",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 476,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0378",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0379",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 88,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0380",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0381",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 480,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0382",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0383",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0384",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0385",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 94,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 484,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0386",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0387",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0388",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0389",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 488,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0390",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0391",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 100,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0392",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0393",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 492,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0394",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0395",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0396",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0397",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 106,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 496,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0398",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0399",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0400",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0401",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 500,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0402",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0403",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 112,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0404",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0405",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 504,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0406",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0407",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0408",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0409",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 118,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 508,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0410",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0411",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0412",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0413",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 512,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0414",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0415",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 124,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0416",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0417",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 516,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0418",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0419",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0420",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0421",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 130,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 520,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0422",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0423",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0424",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0425",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 524,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0426",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0427",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 136,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0428",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0429",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 528,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0430",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0431",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0432",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0433",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 142,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 532,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0434",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0435",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0436",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0437",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 536,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0438",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0439",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 148,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0440",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0441",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 540,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0442",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0443",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0444",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0445",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 154,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 544,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0446",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0447",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0448",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0449",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 548,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0450",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0451",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 10,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0452",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0453",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 552,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0454",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0455",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0456",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0457",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 16,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 556,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0458",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0459",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0460",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0461",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 560,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0462",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0463",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 22,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0464",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0465",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 564,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0466",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0467",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0468",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0469",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 28,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 568,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0470",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0471",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0472",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0473",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 572,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0474",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0475",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 34,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0476",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 1,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0477",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 2,
+        "status": "pending",
+        "finalPrice": 576,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0478",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 3,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0479",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 4,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0480",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 5,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0481",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 40,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 6,
+        "status": "pending",
+        "finalPrice": 580,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0482",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 7,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0483",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 8,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0484",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 9,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0485",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 10,
+        "status": "pending",
+        "finalPrice": 584,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0486",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-006",
+        "quantity": 11,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0487",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 46,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-007",
+        "quantity": 12,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0488",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-008",
+        "quantity": 13,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0489",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-009",
+        "quantity": 14,
+        "status": "pending",
+        "finalPrice": 588,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0490",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-010",
+        "quantity": 15,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0491",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-011",
+        "quantity": 16,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0492",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-012",
+        "quantity": 17,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0493",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 52,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-013",
+        "quantity": 18,
+        "status": "pending",
+        "finalPrice": 592,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0494",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-014",
+        "quantity": 19,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0495",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-015",
+        "quantity": 20,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0496",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-001",
+        "quantity": 21,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0497",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-002",
+        "quantity": 22,
+        "status": "pending",
+        "finalPrice": 596,
+        "appliedRules": [1, 5]
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0498",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-003",
+        "quantity": 23,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0499",
+    "is_active": true,
+    "status": "pending",
+    "distanceKm": 58,
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-004",
+        "quantity": 24,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": []
+      }
+    ]
+  },
+  {
+    "jobId": "bulk-0500",
+    "is_active": true,
+    "status": "pending",
+    "items": [
+      {
+        "index": 0,
+        "productId": "SKU-005",
+        "quantity": 25,
+        "status": "pending",
+        "finalPrice": 0,
+        "appliedRules": [8]
+      }
+    ]
+  }
+]

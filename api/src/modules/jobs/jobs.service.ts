@@ -58,11 +58,12 @@ export class JobsService {
   }
 
   async create(createJobDto: CreateJobDto): Promise<Job> {
-    const jobId = createJobDto.jobId?.trim() || randomUUID();
-    const dup = await this.jobModel.findOne({ jobId }).lean();
-    if (dup) {
-      throw new ConflictException(`Job with jobId ${jobId} already exists`);
-    }
+    const last = await this.jobModel
+      .findOne()
+      .sort({ jobId: -1 })
+      .select({ jobId: 1 })
+      .lean();
+    const nextId = typeof last?.jobId === 'number' ? last.jobId + 1 : 1;
 
     const quoteAt = new Date();
 
@@ -112,7 +113,7 @@ export class JobsService {
     }
 
     const doc = await this.jobModel.create({
-      jobId,
+      jobId: nextId,
       status: 'completed',
       ...(jobDistanceKm != null && { distanceKm: jobDistanceKm }),
       items,
@@ -122,7 +123,7 @@ export class JobsService {
     return doc.toObject();
   }
 
-  async findOne(jobId: string): Promise<Job> {
+  async findOne(jobId: number): Promise<Job> {
     const version = await this.redisService.getInt(this.listCacheVersionKey, 1);
     const cacheKey = `jobs:one:v${version}:${jobId}`;
     const cached = await this.redisService.getJson<Job>(cacheKey);
@@ -136,7 +137,7 @@ export class JobsService {
     return job;
   }
 
-  async update(jobId: string, updateJobDto: UpdateJobDto): Promise<Job> {
+  async update(jobId: number, updateJobDto: UpdateJobDto): Promise<Job> {
     const job = await this.jobModel
       .findOneAndUpdate({ jobId }, updateJobDto, { new: true })
       .lean();
@@ -147,7 +148,7 @@ export class JobsService {
     return job;
   }
 
-  async remove(jobId: string): Promise<Job> {
+  async remove(jobId: number): Promise<Job> {
     const job = await this.jobModel
       .findOneAndUpdate({ jobId }, { is_active: false }, { new: true })
       .lean();
@@ -162,7 +163,7 @@ export class JobsService {
     const jsonData = await fs.readFile('data/jobs.json', 'utf8');
     const rows: Array<
       Partial<Job> & {
-        jobId: string;
+        jobId: number;
         items?: Array<{
           index?: number;
           productId: string;
