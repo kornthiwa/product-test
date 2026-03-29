@@ -1,72 +1,84 @@
-# Pricing Platform API
+# Pricing Platform
 
-แอปพลิเคชัน Backend ด้วย **NestJS** สำหรับจัดการกฎราคา (pricing rules) เก็บใน **MongoDB** และใช้ **Redis** แคชรายการกฎแบบแบ่งหน้า โค้ดหลักอยู่ในโฟลเดอร์ `api/`
-
----
-
-## ภาพรวม
-
-- **Rules:** CRUD กฎราคา, ซิงก์จาก `data/rules.json` เข้าฐานข้อมูล, รายการแบบแบ่งหน้าพร้อมแคช Redis
-- **Health:** ตรวจว่าเซอร์วิสทำงาน
-- **Quotes:** `POST /quotes/price` คำนวณราคาจาก payload + กฎ (ดูตัวอย่างด้านล่าง)
-- **Jobs:** โมดูลจัดการงาน — bulk quote ตามสเปกเต็มยังพัฒนาต่อได้
+Backend สำหรับคำนวณราคา (quote) จาก **กฎราคาแบบตั้งค่าได้** — โครงแบบ **modular monolith** ด้วย NestJS โค้ดหลักอยู่ที่โฟลเดอร์ [`api/`](api/)
 
 ---
 
-## เทคโนโลยี
+## ความสามารถหลัก
 
-| ส่วน        | รายการ                                                            |
-| ----------- | ----------------------------------------------------------------- |
-| Runtime     | Node.js 20+                                                       |
-| Framework   | NestJS 11                                                         |
-| Validation  | `class-validator`, `class-transformer`, `ValidationPipe` (global) |
-| ฐานข้อมูล   | MongoDB + Mongoose (`@nestjs/mongoose`)                           |
-| แคช         | Redis (`ioredis`)                                                 |
-| ทดสอบ       | Jest, Supertest, `@nestjs/testing`                                |
-| คอนเทนเนอร์ | Docker Compose (`api`, `mongo`, `redis`)                          |
+| พื้นที่ | รายละเอียด |
+|--------|------------|
+| **Pricing** | `POST /quotes/price` คำนวณราคาทันทีจากสินค้า + กฎที่มีผล ณ เวลาที่กำหนด |
+| **Bulk** | `POST /quotes/bulk` อัปโหลดไฟล์ **CSV หรือ JSON** (multipart field `file`) แล้วสร้างงาน (job) ที่คำนวณราคาแล้วทีละรายการ |
+| **Jobs** | `GET /jobs/:jobId` ดึงผลงานตามเลข `jobId`, รายการแบ่งหน้า, CRUD/sync จาก JSON |
+| **Rules** | CRUD กฎ, ซิงก์จาก `data/rules.json`, รายการแบ่งหน้า + แคช Redis |
+| **Products** | CRUD/sync สินค้าจาก `data/products.json` (ใช้ประกอบการคิดราคา) |
+| **Health** | `GET /health` |
 
-> โปรเจกต์นี้ **ไม่ได้** ติดตั้ง Swagger/OpenAPI ใน `package.json` ปัจจุบัน
+ประเภทกฎที่รองรับ: `TimeWindowPromotion`, `RemoteAreaSurcharge`, `WeightTier` — มี metadata: `priority`, `effective_from`, `effective_to`, `is_active`
 
 ---
 
-## โครงสร้างโรงงาน
+## สถาปัตยกรรม (ภาพรวม)
 
-```txt
+```text
+┌─────────────┐     ┌──────────────┐     ┌─────────────┐
+│  HTTP API   │────▶│   Modules    │────▶│  MongoDB    │
+│  (NestJS)   │     │ rules,       │     │ (rules,     │
+│             │     │ quotes,      │     │  products,  │
+│             │     │ jobs,        │     │  jobs)      │
+│             │     │ products     │     └─────────────┘
+└─────────────┘     └──────┬───────┘
+                           │
+                           ▼
+                    ┌─────────────┐
+                    │    Redis    │
+                    │ (list cache)│
+                    └─────────────┘
+```
+
+- **Quote pricing:** logic กลางใน `quotes/quote-pricing.ts` — ใช้ทั้ง `QuotesService` และ `JobsService` ตอนสร้างงานที่มีการคิดราคา
+- **ข้อมูลตัวอย่าง:** ไฟล์ JSON ใต้ `api/data/` สามารถ sync เข้า MongoDB ผ่าน endpoint `*/syncjson`
+
+> โปรเจกต์นี้ใช้ **MongoDB + Redis** สำหรับ persistence และแคช (หนักกว่า “in-memory / JSON file only” ในสเปกบางชุด — เหมาะกับ demo ที่ต้องการ persistence จริง)
+
+---
+
+## โครงสร้าง repository
+
+```text
 product/
-└─ api/
-   ├─ data/
-   │  └─ rules.json          # ข้อมูลตัวอย่างสำหรับ sync เข้า MongoDB
-   ├─ src/
-   │  ├─ app.module.ts
-   │  ├─ main.ts
-   │  ├─ app.controller.ts   # GET /health
-   │  ├─ modules/
-   │  │  ├─ rules/           # กฎราคา (หลัก)
-   │  │  ├─ quotes/          # POST /quotes/price
-   │  │  └─ jobs/            # scaffold
-   │  └─ shared/redis/       # RedisModule + RedisService
-   ├─ test/
-   │  └─ app.e2e-spec.ts
-   ├─ docker-compose.yml
-   ├─ Dockerfile
-   ├─ package.json
-   └─ yarn.lock
+├── api/                          # NestJS API (รันและทดสอบหลักที่นี่)
+│   ├── data/
+│   │   ├── rules.json
+│   │   ├── products.json
+│   │   ├── jobs.json
+│   │   ├── bulk_quotes.csv       # ตัวอย่าง bulk CSV
+│   │   └── jobs-bulk-test-500.json
+│   ├── postman/
+│   │   └── Pricing-Platform.postman_collection.json
+│   ├── src/modules/              # rules | quotes | jobs | products
+│   ├── test/                     # E2E (Jest + Supertest)
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+│   └── package.json
+├── app/                          # (ถ้ามี) แอป frontend แยกต่างหาก
+└── README.md                     # ไฟล์นี้
 ```
 
 ---
 
 ## ความต้องการของระบบ
 
-รันแบบ local ต้องมี:
-
-- **MongoDB** (ค่าเริ่มต้น `mongodb://localhost:27017/pricing_platform`)
-- **Redis** (ค่าเริ่มต้น `redis://localhost:6379`)
-
-รัน E2E ต้องมี MongoDB บน `localhost:27017` (สคริปต์จะใช้ฐานชื่อ `pricing_platform_e2e_test` และล้างหลังแต่ละเคส)
+- **Node.js** 20+
+- **Yarn** (หรือใช้ `npm` แทนได้ถ้าปรับคำสั่งเอง)
+- **MongoDB** และ **Redis** เมื่อรันนอก Docker  
+  - MongoDB ค่าเริ่มต้น: `mongodb://localhost:27017/pricing_platform`  
+  - Redis: `redis://localhost:6379`
 
 ---
 
-## การติดตั้งและรัน (Local)
+## ติดตั้งและรันแบบ local
 
 จากโฟลเดอร์ `api/`:
 
@@ -76,8 +88,10 @@ yarn build
 yarn start:dev
 ```
 
-- พอร์ตเริ่มต้น: `http://localhost:3000` (หรือตาม `PORT`)
-- Health: `GET http://localhost:3000/health`
+- Base URL: `http://localhost:3000` (หรือตาม `PORT`)
+- หลังรันครั้งแรก แนะนำเรียกซิงก์ข้อมูลตัวอย่าง:
+  - `GET http://localhost:3000/rules/syncjson`
+  - `GET http://localhost:3000/products/syncjson`
 
 ---
 
@@ -89,11 +103,7 @@ yarn start:dev
 docker compose up --build
 ```
 
-บริการ:
-
-- **api** — พอร์ต `3000`, ตั้ง `MONGO_URI` และ `REDIS_URL` ชี้ไปที่คอนเทนเนอร์ใน compose
-- **mongo** — MongoDB 7, พอร์ต `27017`, volume `mongo_data`
-- **redis** — Redis 7, พอร์ต `6379`
+บริการ: **api** (พอร์ต `3000`), **mongo** (`27017`), **redis** (`6379`)
 
 หยุด:
 
@@ -105,149 +115,104 @@ docker compose down
 
 ## ตัวแปรสภาพแวดล้อม
 
-| ตัวแปร      | ความหมาย        | ค่าเริ่มต้น (ถ้าไม่ตั้ง)                     |
-| ----------- | --------------- | -------------------------------------------- |
-| `PORT`      | พอร์ต HTTP      | `3000`                                       |
-| `MONGO_URI` | URI ของ MongoDB | `mongodb://localhost:27017/pricing_platform` |
-| `REDIS_URL` | URI ของ Redis   | `redis://localhost:6379`                     |
+| ตัวแปร | ความหมาย | ค่าเริ่มต้น (ถ้าไม่ตั้ง) |
+|--------|-----------|---------------------------|
+| `PORT` | พอร์ต HTTP | `3000` |
+| `MONGO_URI` | URI MongoDB | `mongodb://localhost:27017/pricing_platform` |
+| `REDIS_URL` | URI Redis | `redis://localhost:6379` |
 
-> อย่า commit ไฟล์ `.env` ที่มีข้อมูลจริงขององค์กร
-
----
-
-## Postman
-
-นำเข้า [api/postman/Pricing-Platform.postman_collection.json](api/postman/Pricing-Platform.postman_collection.json) ใน Postman (Import → เลือกไฟล์) แล้วปรับ collection variable **`baseUrl`** ถ้ารันคนละพอร์ต/โฮสต์ แนะนำรันคำขอ **Rules → Sync from JSON** และ **Products → Sync from JSON** ก่อนทดสอบ quote/job
+ไม่ควร commit ไฟล์ `.env` ที่มีข้อมูลลับขององค์กร
 
 ---
 
-## API ที่ใช้งานได้จริง
+## API สรุป
 
-### Health
+| Method | Path | คำอธิบาย |
+|--------|------|----------|
+| GET | `/health` | สถานะบริการ |
+| POST | `/quotes/price` | คำนวณราคาทันที (JSON body) |
+| POST | `/quotes/bulk` | อัปโหลดไฟล์ CSV หรือ JSON (`multipart/form-data`, field **`file`**) |
+| GET | `/jobs` | รายการงานแบ่งหน้า |
+| GET | `/jobs/:jobId` | ดึงงานตามเลข `jobId` |
+| POST/PATCH/DELETE | `/jobs` … | สร้าง/แก้/ลบ (soft) ตามโมดูล jobs |
+| GET | `/jobs/syncjson` | ซิงก์จาก `data/jobs.json` |
+| — | `/rules/*` | CRUD + list + `syncjson` |
+| — | `/products/*` | CRUD + list + `syncjson` |
 
-`GET /health`
+---
 
-ตัวอย่างการตอบกลับ:
+## ตัวอย่างคำขอ
 
-```json
-{ "message": "service is running OK" }
+### คำนวณราคาทันที
+
+```http
+POST /quotes/price
+Content-Type: application/json
 ```
-
-### Rules
-
-| Method   | Path              | คำอธิบาย                                                                               |
-| -------- | ----------------- | -------------------------------------------------------------------------------------- |
-| `GET`    | `/rules`          | รายการแบบแบ่งหน้า (`page`, `pageSize`) เรียง `priority` มากไปน้อย แคช Redis ~30 วินาที |
-| `GET`    | `/rules/syncjson` | อ่าน `data/rules.json` แล้ว upsert เข้า MongoDB, bump เวอร์ชันแคช                      |
-| `GET`    | `/rules/:id`      | ดูกฎตาม `id` (ตัวเลข)                                                                  |
-| `POST`   | `/rules`          | สร้างกฎ (`id` สร้างอัตโนมัติจากลำดับล่าสุด)                                            |
-| `PATCH`  | `/rules/:id`      | แก้ไขกฎ                                                                                |
-| `DELETE` | `/rules/:id`      | **ปิดใช้งาน** (soft delete: ตั้ง `is_active: false`)                                   |
-
-Query สำหรับรายการ:
-
-- `page` (optional, default `1`)
-- `pageSize` (optional, default `10`)
-
-### โมเดลกฎ (MongoDB collection `pricing_rules`)
-
-ฟิลด์หลัก:
-
-- `id` — ตัวเลข unique (ไม่ใช่ string แบบ `R-WEIGHT-01`)
-- `type` — `TimeWindowPromotion` | `RemoteAreaSurcharge` | `WeightTier`
-- `method` — `discount` | `surcharge`
-- `type_value` — `percent` | `amount`
-- `value` — ตัวเลข
-- `priority` — ความสำคัญ (ใช้เรียงในรายการ)
-- `effective_from`, `effective_to` — ช่วงวันที่มีผล
-- `is_active` — เปิด/ปิดใช้งาน
-- `name` — ชื่อกฎ
-
-ตัวอย่าง body สำหรับ `POST` / `PATCH`:
-
-```json
-{
-  "name": "Promo Lunch 10%",
-  "type": "TimeWindowPromotion",
-  "method": "discount",
-  "type_value": "percent",
-  "value": 10,
-  "priority": 90,
-  "effective_from": "2026-01-01T00:00:00.000Z",
-  "effective_to": "2026-12-31T23:59:59.000Z",
-  "is_active": true
-}
-```
-
-### Quotes (คำนวณราคาทันที)
-
-| Method | Path            | คำอธิบาย                                     |
-| ------ | --------------- | -------------------------------------------- |
-| `POST` | `/quotes/price` | คำนวณราคาจาก `items` + กฎที่มีผล ณ `quoteAt` |
-
-ตัวอย่าง payload:
 
 ```json
 {
   "quoteAt": "2026-03-29T10:00:00.000Z",
   "items": [
-    { "productId": "SKU-014", "quantity": 1 },
-    { "productId": "SKU-001", "quantity": 3 },
-    { "productId": "SKU-002", "quantity": 2 },
-    { "productId": "SKU-005", "quantity": 4 },
-    { "productId": "SKU-010", "quantity": 1, "distanceKm": 85 },
-    { "productId": "SKU-012", "quantity": 2 },
-    { "productId": "SKU-015", "quantity": 5 }
+    { "productId": "SKU-001", "quantity": 2 },
+    { "productId": "SKU-010", "quantity": 1, "distanceKm": 85 }
   ]
 }
 ```
 
-- แต่ละบรรทัดมี `productId`, `quantity` (บังคับ); ออปชัน `distanceKm` สำหรับกฎ `RemoteAreaSurcharge` (ตัวอย่างบรรทัด `SKU-010` ใช้ทดสอบช่วงระยะ ~50–120 km ใน `rules.json`)
-- ต้องมีสินค้าใน MongoDB (เช่น sync จาก `api/data/products.json`) และกฎที่ sync แล้ว
+- `distanceKm` ต่อบรรทัดใช้กับกฎประเภท remote / ระยะทาง
 
-### Jobs
+### Bulk (Postman หรือ client ที่รองรับ multipart)
 
-`GET/POST/PATCH/DELETE` ที่ `/jobs` — จัดการงาน bulk / สถานะตามโมดูล jobs
+- **URL:** `POST /quotes/bulk`
+- **Body:** form-data, key **`file`**, type **File**
+- **CSV:** หัวตารางต้องมีอย่างน้อย `request_id`, `product_id`, `quantity` และมีได้ `item_index`, `distance_km` — แถวที่ `request_id` เดียวกันจัดเป็นงานเดียว (หลายบรรทัดสินค้า)
+- **JSON:** อาร์เรย์ของงาน หรือ `{ "data": [ ... ] }` — แต่ละงานมี `items` ที่มี `productId`, `quantity` (และฟิลด์อื่นตามที่ระบบรองรับ)
 
----
+ตัวอย่างไฟล์: `api/data/bulk_quotes.csv`, `api/data/jobs-bulk-test-500.json`
 
-## ข้อมูลตัวอย่าง
-
-- **`api/data/rules.json`** — อาร์เรย์ของกฎ ใช้กับ `GET /rules/syncjson` เพื่อโหลด/อัปเดต MongoDB
-
-หลัง deploy หรือรันครั้งแรก แนะนำเรียก `GET /rules/syncjson` (หรือให้ E2E /สคริปต์จัดการ) เพื่อให้มีข้อมูลกฎในฐานข้อมูล
+**คำตอบ:** `{ "data": [ Job, ... ] }` — แต่ละ `Job` มี `jobId` เป็นตัวเลข ใช้กับ `GET /jobs/:jobId`
 
 ---
 
-## พฤติกรรมแคช (Redis)
+## เอกสาร API (Postman)
 
-- คีย์เวอร์ชัน `rules:list:version` ใช้ invalidate แคชเมื่อมีการสร้าง/แก้ไข/ลบ (soft)/sync JSON
-- แต่ละหน้ารายการถูกแคชแยกตาม `page`, `pageSize`, เวอร์ชัน — TTL 30 วินาที
+นำเข้า collection:
+
+`api/postman/Pricing-Platform.postman_collection.json`
+
+ตั้งค่า variable **`baseUrl`** ให้ตรงกับเซิร์ฟเวอร์ของคุณ
+
+แพ็กเกจ `@nestjs/swagger` มีใน `api/package.json` แต่ **ยังไม่ได้เปิด endpoint `/docs`** ใน `main.ts` — ถ้าต้องการ OpenAPI ให้เพิ่มการตั้งค่า Swagger ใน bootstrap
 
 ---
 
 ## การทดสอบ
 
-จาก `api/`:
+จากโฟลเดอร์ `api/`:
 
 ```bash
-yarn test          # unit (*.spec.ts ใน src)
-yarn test:e2e      # ต้องมี MongoDB (และ Redis ถ้าแอปเชื่อมตอนรัน)
-yarn test:cov      # coverage
+yarn test        # unit tests ใต้ src/**/*.spec.ts
+yarn test:e2e    # ต้องมี MongoDB ที่ localhost:27017
+yarn test:cov
 ```
 
-E2E (`test/app.e2e-spec.ts`) ครอบคลุม `/health`, rules list/detail/sync, CRUD rules บางเส้นทาง
+E2E ใช้ฐานชื่อ `pricing_platform_e2e_test` และล้างหลังแต่ละเคส
 
 ---
 
-## สิ่งที่อาจพัฒนาต่อ (จากสเปกเดิม)
+## Sample data (ตาม deliverable)
 
-- Bulk quote + job tracking (`job_id`, สถานะ queued/completed)
-- Swagger ที่ `/docs`, structured logging + `trace_id`
-- ปรับ quotes/jobs ให้สอดคล้องโดเมน
+| ไฟล์ | ใช้ทำอะไร |
+|------|------------|
+| `api/data/rules.json` | กฎราคา — sync ผ่าน `GET /rules/syncjson` |
+| `api/data/products.json` | สินค้า — `GET /products/syncjson` |
+| `api/data/bulk_quotes.csv` | ตัวอย่าง bulk CSV |
+| `api/data/jobs-bulk-test-500.json` | ตัวอย่าง bulk JSON (อาร์เรย์งานจำนวนมาก) |
+| `api/data/jobs.json` | seed งาน — `GET /jobs/syncjson` |
 
 ---
 
 ## License
 
-ค่าใน `api/package.json` ระบุ `UNLICENSED` — ปรับตามนโยบายของโปรเจกต์ได้
+ดูค่าใน `api/package.json` (ปัจจุบันระบุ `UNLICENSED`) — ปรับตามนโยบายโปรเจกต์ได้
