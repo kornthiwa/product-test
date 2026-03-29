@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import { Test } from '@nestjs/testing';
 import { getModelToken } from '@nestjs/mongoose';
-import { ConflictException, NotFoundException } from '@nestjs/common';
+import { NotFoundException } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { Product } from './entities/product.entity';
 import { RedisService } from '../../shared/redis/redis.service';
@@ -117,7 +117,7 @@ describe('ProductsService', () => {
     });
     expect(chain.skip).toHaveBeenCalledWith(0);
     expect(chain.limit).toHaveBeenCalledWith(10);
-    expect(chain.sort).toHaveBeenCalledWith({ id: 1 });
+    expect(chain.sort).toHaveBeenCalledWith({ id: -1 });
     expect(redisService.setJson).toHaveBeenCalledWith(
       'products:list:v1:page=1:pageSize=10',
       res,
@@ -142,12 +142,11 @@ describe('ProductsService', () => {
     );
   });
 
-  it('create() should persist product, default is_active, and call redis incr', async () => {
-    const dupChain = createQueryChain(null);
-    productModel.findOne.mockReturnValue(dupChain);
+  it('create() should persist product with sequential id, default is_active, and call redis incr', async () => {
+    productModel.countDocuments.mockResolvedValue(0);
     const created = {
       toObject: jest.fn().mockReturnValue({
-        id: 'SKU-001',
+        id: '1',
         name: 'Box',
         price: 100,
         weight: 1,
@@ -166,36 +165,19 @@ describe('ProductsService', () => {
 
     const res = await service.create(dto);
     expect(res).toEqual({
-      id: 'SKU-001',
+      id: '1',
       name: 'Box',
       price: 100,
       weight: 1,
       is_active: true,
     });
-    expect(productModel.findOne).toHaveBeenCalledWith({ id: 'SKU-001' });
+    expect(productModel.countDocuments).toHaveBeenCalled();
     expect(productModel.create).toHaveBeenCalledWith({
       ...dto,
+      id: '1',
       is_active: true,
     });
     expect(redisService.incr).toHaveBeenCalledWith('products:list:version');
-  });
-
-  it('create() should throw ConflictException when id already exists', async () => {
-    const dupChain = createQueryChain({ id: 'SKU-001' });
-    productModel.findOne.mockReturnValue(dupChain);
-
-    const dto: CreateProductDto = {
-      id: 'SKU-001',
-      name: 'Box',
-      price: 100,
-      weight: 1,
-    };
-
-    await expect(service.create(dto)).rejects.toBeInstanceOf(
-      ConflictException,
-    );
-    expect(productModel.create).not.toHaveBeenCalled();
-    expect(redisService.incr).not.toHaveBeenCalled();
   });
 
   it('findOne() should return product when found', async () => {

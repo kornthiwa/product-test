@@ -117,7 +117,7 @@ describe('RulesService', () => {
     });
     expect(chain.skip).toHaveBeenCalledWith(0);
     expect(chain.limit).toHaveBeenCalledWith(10);
-    expect(chain.sort).toHaveBeenCalledWith({ priority: -1, _id: -1 });
+    expect(chain.sort).toHaveBeenCalledWith({ id: -1 });
     expect(redisService.setJson).toHaveBeenCalledWith(
       'rules:list:v1:page=1:pageSize=10',
       res,
@@ -162,9 +162,8 @@ describe('RulesService', () => {
     );
   });
 
-  it('create() should assign next id and call redis incr', async () => {
-    const lastChain = createQueryChain({ id: 5 });
-    ruleModel.findOne.mockReturnValue(lastChain);
+  it('create() should assign next id from count and call redis incr', async () => {
+    ruleModel.countDocuments.mockResolvedValue(5);
     ruleModel.create.mockResolvedValue({ id: 6 });
     redisService.incr.mockResolvedValue(2);
 
@@ -181,23 +180,19 @@ describe('RulesService', () => {
 
     const res = await service.create(dto);
     expect(res).toEqual({ id: 6 });
-    expect(lastChain.sort).toHaveBeenCalledWith({ id: -1 });
-    expect(lastChain.select).toHaveBeenCalledWith({ id: 1 });
+    expect(ruleModel.countDocuments).toHaveBeenCalled();
     expect(ruleModel.create).toHaveBeenCalledWith(
       expect.objectContaining({ id: 6 }),
     );
     expect(redisService.incr).toHaveBeenCalledWith('rules:list:version');
   });
 
-  it('create() should default next id to 1 when no last id', async () => {
-    const lastChain = createQueryChain(null);
-    ruleModel.findOne.mockReturnValue(lastChain);
+  it('create() should default next id to 1 when count is zero', async () => {
+    ruleModel.countDocuments.mockResolvedValue(0);
     ruleModel.create.mockResolvedValue({ id: 1 });
 
     const res = await service.create({ name: 'X' } as CreateRuleDto);
     expect(res).toEqual({ id: 1 });
-    expect(lastChain.sort).toHaveBeenCalledWith({ id: -1 });
-    expect(lastChain.select).toHaveBeenCalledWith({ id: 1 });
     expect(ruleModel.create).toHaveBeenCalledWith(
       expect.objectContaining({ id: 1 }),
     );

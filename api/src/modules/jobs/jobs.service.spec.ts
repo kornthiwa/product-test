@@ -1,7 +1,7 @@
 import * as fs from 'fs/promises';
 import { Test } from '@nestjs/testing';
 import { getModelToken } from '@nestjs/mongoose';
-import { ConflictException, NotFoundException } from '@nestjs/common';
+import { NotFoundException } from '@nestjs/common';
 import { JobsService } from './jobs.service';
 import { Job } from './entities/job.entity';
 import { RedisService } from '../../shared/redis/redis.service';
@@ -20,6 +20,7 @@ type QueryChain<T> = {
   skip: jest.Mock;
   limit: jest.Mock;
   sort: jest.Mock;
+  select: jest.Mock;
   lean: jest.Mock<Promise<T>, []>;
 };
 
@@ -28,12 +29,14 @@ function createQueryChain<T>(result: T): QueryChain<T> {
     skip: jest.fn(),
     limit: jest.fn(),
     sort: jest.fn(),
+    select: jest.fn(),
     lean: jest.fn(),
   };
 
   chain.skip.mockReturnValue(chain);
   chain.limit.mockReturnValue(chain);
   chain.sort.mockReturnValue(chain);
+  chain.select.mockReturnValue(chain);
   chain.lean.mockResolvedValue(result);
 
   return chain;
@@ -87,7 +90,7 @@ describe('JobsService', () => {
       page: 1,
       pageSize: 10,
       total: 2,
-      data: [{ jobId: '1' }],
+      data: [{ jobId: 1 }],
     });
 
     await expect(
@@ -96,7 +99,7 @@ describe('JobsService', () => {
       page: 1,
       pageSize: 10,
       total: 2,
-      data: [{ jobId: '1' }],
+      data: [{ jobId: 1 }],
     });
 
     expect(redisService.getInt).toHaveBeenCalledWith('jobs:list:version', 1);
@@ -111,7 +114,7 @@ describe('JobsService', () => {
     redisService.getInt.mockResolvedValue(1);
     redisService.getJson.mockResolvedValue(null);
     jobModel.countDocuments.mockResolvedValue(2);
-    const chain = createQueryChain([{ jobId: '1' }, { jobId: '2' }]);
+    const chain = createQueryChain([{ jobId: 1 }, { jobId: 2 }]);
     jobModel.find.mockReturnValue(chain);
 
     const res = await service.findAllList({
@@ -123,11 +126,11 @@ describe('JobsService', () => {
       page: 1,
       pageSize: 10,
       total: 2,
-      data: [{ jobId: '1' }, { jobId: '2' }],
+      data: [{ jobId: 1 }, { jobId: 2 }],
     });
     expect(chain.skip).toHaveBeenCalledWith(0);
     expect(chain.limit).toHaveBeenCalledWith(10);
-    expect(chain.sort).toHaveBeenCalledWith({ createdAt: -1, jobId: 1 });
+    expect(chain.sort).toHaveBeenCalledWith({ jobId: -1 });
     expect(redisService.setJson).toHaveBeenCalledWith(
       'jobs:list:v1:page=1:pageSize=10',
       res,
@@ -155,7 +158,7 @@ describe('JobsService', () => {
   it('findOne() should return cached job when cache hit', async () => {
     redisService.getInt.mockResolvedValue(1);
     redisService.getJson.mockResolvedValue({
-      jobId: '1',
+      jobId: 1,
       status: 'queued',
       items: [],
       is_active: true,
@@ -170,7 +173,7 @@ describe('JobsService', () => {
     redisService.getInt.mockResolvedValue(1);
     redisService.getJson.mockResolvedValue(null);
     const chain = createQueryChain({
-      jobId: '1',
+      jobId: 1,
       status: 'completed',
       items: [],
       is_active: true,
@@ -196,8 +199,7 @@ describe('JobsService', () => {
   });
 
   it('create() should price lines via engine and persist completed job', async () => {
-    const dupChain = createQueryChain(null);
-    jobModel.findOne.mockReturnValue(dupChain);
+    jobModel.countDocuments.mockResolvedValue(0);
     rulesService.findWithQuery.mockResolvedValue([]);
     productsService.findOne.mockResolvedValue({
       id: 'SKU-001',
@@ -208,7 +210,7 @@ describe('JobsService', () => {
     });
     const created = {
       toObject: jest.fn().mockReturnValue({
-        jobId: '1',
+        jobId: 1,
         status: 'completed',
         items: [
           {
@@ -227,18 +229,17 @@ describe('JobsService', () => {
     redisService.incr.mockResolvedValue(2);
 
     const dto: CreateJobDto = {
-      jobId: '1',
       items: [{ productId: 'SKU-001', quantity: 2 }],
     };
 
     const res = await service.create(dto);
-    expect(res.jobId).toBe('1');
+    expect(res.jobId).toBe(1);
     expect(res.is_active).toBe(true);
     expect(rulesService.findWithQuery).toHaveBeenCalled();
     expect(productsService.findOne).toHaveBeenCalledWith('SKU-001');
     expect(jobModel.create).toHaveBeenCalledWith(
       expect.objectContaining({
-        jobId: '1',
+        jobId: 1,
         status: 'completed',
         is_active: true,
         items: [
@@ -257,8 +258,7 @@ describe('JobsService', () => {
   });
 
   it('create() should set appliedRules from pricing engine (ignore client appliedRules)', async () => {
-    const dupChain = createQueryChain(null);
-    jobModel.findOne.mockReturnValue(dupChain);
+    jobModel.countDocuments.mockResolvedValue(0);
     rulesService.findWithQuery.mockResolvedValue([
       {
         id: 99,
@@ -281,12 +281,11 @@ describe('JobsService', () => {
       is_active: true,
     });
     const created = {
-      toObject: jest.fn().mockReturnValue({ jobId: 'j1' }),
+      toObject: jest.fn().mockReturnValue({ jobId: 1 }),
     };
     jobModel.create.mockResolvedValue(created);
 
     const dto: CreateJobDto = {
-      jobId: 'j1',
       distanceKm: 85,
       items: [{ productId: 'SKU-001', quantity: 1 }],
     };
@@ -300,8 +299,7 @@ describe('JobsService', () => {
   });
 
   it('create() should persist distanceKm on job document when provided', async () => {
-    const dupChain = createQueryChain(null);
-    jobModel.findOne.mockReturnValue(dupChain);
+    jobModel.countDocuments.mockResolvedValue(0);
     rulesService.findWithQuery.mockResolvedValue([]);
     productsService.findOne.mockResolvedValue({
       id: 'SKU-001',
@@ -311,11 +309,10 @@ describe('JobsService', () => {
       is_active: true,
     });
     jobModel.create.mockResolvedValue({
-      toObject: jest.fn().mockReturnValue({ jobId: 'd1' }),
+      toObject: jest.fn().mockReturnValue({ jobId: 1 }),
     });
 
     await service.create({
-      jobId: 'd1',
       distanceKm: 85,
       items: [
         { productId: 'SKU-001', quantity: 1 },
@@ -331,23 +328,9 @@ describe('JobsService', () => {
     expect(call.items).toHaveLength(2);
   });
 
-  it('create() should throw ConflictException when jobId already exists', async () => {
-    const dupChain = createQueryChain({ jobId: '1' });
-    jobModel.findOne.mockReturnValue(dupChain);
-
-    const dto: CreateJobDto = {
-      jobId: '1',
-      items: [{ productId: 'SKU-001', quantity: 1 }],
-    };
-
-    await expect(service.create(dto)).rejects.toBeInstanceOf(ConflictException);
-    expect(jobModel.create).not.toHaveBeenCalled();
-    expect(redisService.incr).not.toHaveBeenCalled();
-  });
-
   it('update() should return updated job and call redis incr', async () => {
     const chain = createQueryChain({
-      jobId: '1',
+      jobId: 1,
       status: 'completed',
       items: [],
       is_active: true,
@@ -375,7 +358,7 @@ describe('JobsService', () => {
 
   it('remove() should soft-delete job and call redis incr', async () => {
     const chain = createQueryChain({
-      jobId: '1',
+      jobId: 1,
       is_active: false,
     });
     jobModel.findOneAndUpdate.mockReturnValue(chain);
@@ -448,16 +431,21 @@ describe('JobsService', () => {
           updateOne: {
             filter: { jobId: 1 },
             update: {
-              $set: expect.objectContaining({
-                jobId: '1',
+              $set: {
+                jobId: 1,
                 status: 'completed',
                 is_active: true,
                 items: [
-                  expect.objectContaining({
+                  {
+                    index: 0,
+                    productId: 'SKU-001',
+                    quantity: 1,
+                    status: 'success',
+                    finalPrice: 0,
                     appliedRules: [1, 2],
-                  }),
+                  },
                 ],
-              }),
+              },
             },
             upsert: true,
           },
@@ -466,11 +454,21 @@ describe('JobsService', () => {
           updateOne: {
             filter: { jobId: '2' },
             update: {
-              $set: expect.objectContaining({
+              $set: {
                 jobId: '2',
                 status: 'queued',
                 is_active: true,
-              }),
+                items: [
+                  {
+                    index: 0,
+                    productId: 'SKU-002',
+                    quantity: 2,
+                    status: 'pending',
+                    finalPrice: 0,
+                    appliedRules: [],
+                  },
+                ],
+              },
             },
             upsert: true,
           },

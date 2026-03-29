@@ -42,12 +42,8 @@ export class RulesService {
   }
 
   async create(createRuleDto: CreateRuleDto): Promise<RuleDocument> {
-    const last = await this.ruleModel
-      .findOne()
-      .sort({ id: -1 })
-      .select({ id: 1 })
-      .lean();
-    const nextId = typeof last?.id === 'number' ? last.id + 1 : 1;
+    const count = await this.ruleModel.countDocuments();
+    const nextId = count + 1;
     const rule = await this.ruleModel.create({
       ...createRuleDto,
       id: nextId,

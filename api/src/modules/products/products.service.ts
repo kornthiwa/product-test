@@ -26,16 +26,11 @@ export class ProductsService {
   ) {}
 
   async create(createProductDto: CreateProductDto): Promise<Product> {
-    const dup = await this.productModel
-      .findOne({ id: createProductDto.id })
-      .lean();
-    if (dup) {
-      throw new ConflictException(
-        `Product with id ${createProductDto.id} already exists`,
-      );
-    }
+    const count = await this.productModel.countDocuments();
+    const nextId = count + 1;
     const doc = await this.productModel.create({
       ...createProductDto,
+      id: nextId.toString(),
       is_active: createProductDto.is_active ?? true,
     });
     await this.redisService.incr(this.listCacheVersionKey);

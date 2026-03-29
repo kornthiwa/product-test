@@ -58,12 +58,8 @@ export class JobsService {
   }
 
   async create(createJobDto: CreateJobDto): Promise<Job> {
-    const last = await this.jobModel
-      .findOne()
-      .sort({ jobId: -1 })
-      .select({ jobId: 1 })
-      .lean();
-    const nextId = typeof last?.jobId === 'number' ? last.jobId + 1 : 1;
+    const count = await this.jobModel.countDocuments();
+    const nextId = count + 1;
 
     const quoteAt = new Date();
 
