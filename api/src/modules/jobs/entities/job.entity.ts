@@ -58,16 +58,8 @@ export class Job {
   })
   status!: JobStatus;
 
-  @Prop({ required: true, min: 0, description: 'จำนวนของงาน' })
-  total!: number;
-
-  @Prop({
-    required: true,
-    min: 0,
-    default: 0,
-    description: 'จำนวนของงานที่ประมวลผลแล้ว',
-  })
-  processed!: number;
+  @Prop({ required: false, min: 0, description: 'ระยะทางจัดส่ง (km)' })
+  distanceKm?: number;
 
   @Prop({ type: [JobItemSchema], default: [] })
   items!: JobItem[];

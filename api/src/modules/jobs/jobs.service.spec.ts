@@ -5,6 +5,9 @@ import { ConflictException, NotFoundException } from '@nestjs/common';
 import { JobsService } from './jobs.service';
 import { Job } from './entities/job.entity';
 import { RedisService } from '../../shared/redis/redis.service';
+import { RulesService } from '../rules/rules.service';
+import { ProductsService } from '../products/products.service';
+import { RuleTypeEnum, RuleTypeValueEnum } from '../rules/entities/rule.entity';
 import { GetListJobDto } from './dto/get-job.dto';
 import { CreateJobDto } from './dto/create-job.dto';
 import { UpdateJobDto } from './dto/update-job.dto';
@@ -55,12 +58,22 @@ describe('JobsService', () => {
     bulkWrite: jest.fn(),
   };
 
+  const rulesService = {
+    findWithQuery: jest.fn(),
+  };
+
+  const productsService = {
+    findOne: jest.fn(),
+  };
+
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule({
       providers: [
         JobsService,
         { provide: RedisService, useValue: redisService },
         { provide: getModelToken(Job.name), useValue: jobModel },
+        { provide: RulesService, useValue: rulesService },
+        { provide: ProductsService, useValue: productsService },
       ],
     }).compile();
 
@@ -144,8 +157,6 @@ describe('JobsService', () => {
     redisService.getJson.mockResolvedValue({
       jobId: '1',
       status: 'queued',
-      total: 0,
-      processed: 0,
       items: [],
       is_active: true,
     });
@@ -161,8 +172,6 @@ describe('JobsService', () => {
     const chain = createQueryChain({
       jobId: '1',
       status: 'completed',
-      total: 1,
-      processed: 1,
       items: [],
       is_active: true,
     });
@@ -188,22 +197,28 @@ describe('JobsService', () => {
     );
   });
 
-  it('create() should persist job with defaults and call redis incr', async () => {
+  it('create() should price lines via engine and persist completed job', async () => {
     const dupChain = createQueryChain(null);
     jobModel.findOne.mockReturnValue(dupChain);
+    rulesService.findWithQuery.mockResolvedValue([]);
+    productsService.findOne.mockResolvedValue({
+      id: 'SKU-001',
+      name: 'P',
+      price: 50,
+      weight: 1,
+      is_active: true,
+    });
     const created = {
       toObject: jest.fn().mockReturnValue({
         jobId: '1',
-        status: 'queued',
-        total: 1,
-        processed: 0,
+        status: 'completed',
         items: [
           {
             index: 0,
             productId: 'SKU-001',
             quantity: 2,
-            status: 'pending',
-            finalPrice: 0,
+            status: 'success',
+            finalPrice: 100,
             appliedRules: [],
           },
         ],
@@ -221,20 +236,20 @@ describe('JobsService', () => {
     const res = await service.create(dto);
     expect(res.jobId).toBe('1');
     expect(res.is_active).toBe(true);
+    expect(rulesService.findWithQuery).toHaveBeenCalled();
+    expect(productsService.findOne).toHaveBeenCalledWith('SKU-001');
     expect(jobModel.create).toHaveBeenCalledWith(
       expect.objectContaining({
         jobId: '1',
-        status: 'queued',
-        total: 1,
-        processed: 0,
+        status: 'completed',
         is_active: true,
         items: [
           expect.objectContaining({
             index: 0,
             productId: 'SKU-001',
             quantity: 2,
-            status: 'pending',
-            finalPrice: 0,
+            status: 'success',
+            finalPrice: 100,
             appliedRules: [],
           }),
         ],
@@ -243,9 +258,30 @@ describe('JobsService', () => {
     expect(redisService.incr).toHaveBeenCalledWith('jobs:list:version');
   });
 
-  it('create() should persist appliedRules as Rule.id numbers', async () => {
+  it('create() should set appliedRules from pricing engine (ignore client appliedRules)', async () => {
     const dupChain = createQueryChain(null);
     jobModel.findOne.mockReturnValue(dupChain);
+    rulesService.findWithQuery.mockResolvedValue([
+      {
+        id: 99,
+        type: 'TimeWindowPromotion',
+        name: 't',
+        method: RuleTypeEnum.DISCOUNT,
+        type_value: RuleTypeValueEnum.PERCENT,
+        value: 10,
+        priority: 100,
+        is_active: true,
+        effective_from: new Date('2026-01-01'),
+        effective_to: new Date('2026-12-31'),
+      },
+    ]);
+    productsService.findOne.mockResolvedValue({
+      id: 'SKU-001',
+      name: 'P',
+      price: 100,
+      weight: 1,
+      is_active: true,
+    });
     const created = {
       toObject: jest.fn().mockReturnValue({ jobId: 'j1' }),
     };
@@ -253,20 +289,48 @@ describe('JobsService', () => {
 
     const dto: CreateJobDto = {
       jobId: 'j1',
-      items: [
-        {
-          productId: 'SKU-001',
-          quantity: 1,
-          appliedRules: [1, 5],
-        },
-      ],
+      distanceKm: 85,
+      items: [{ productId: 'SKU-001', quantity: 1 }],
     };
 
     await service.create(dto);
     const call = jobModel.create.mock.calls[0][0] as {
-      items: { appliedRules: number[] }[];
+      items: { appliedRules: number[]; finalPrice: number }[];
     };
-    expect(call.items[0].appliedRules).toEqual([1, 5]);
+    expect(call.items[0].appliedRules).toEqual([99]);
+    expect(call.items[0].finalPrice).toBe(90);
+  });
+
+  it('create() should persist distanceKm on job document when provided', async () => {
+    const dupChain = createQueryChain(null);
+    jobModel.findOne.mockReturnValue(dupChain);
+    rulesService.findWithQuery.mockResolvedValue([]);
+    productsService.findOne.mockResolvedValue({
+      id: 'SKU-001',
+      name: 'P',
+      price: 10,
+      weight: 1,
+      is_active: true,
+    });
+    jobModel.create.mockResolvedValue({
+      toObject: jest.fn().mockReturnValue({ jobId: 'd1' }),
+    });
+
+    await service.create({
+      jobId: 'd1',
+      distanceKm: 85,
+      items: [
+        { productId: 'SKU-001', quantity: 1 },
+        { productId: 'SKU-001', quantity: 1 },
+      ],
+    });
+
+    const call = jobModel.create.mock.calls[0][0] as {
+      distanceKm?: number;
+      items: unknown[];
+    };
+    expect(call.distanceKm).toBe(85);
+    expect(call.items).toHaveLength(2);
   });
 
   it('create() should throw ConflictException when jobId already exists', async () => {
@@ -287,8 +351,6 @@ describe('JobsService', () => {
     const chain = createQueryChain({
       jobId: '1',
       status: 'completed',
-      total: 1,
-      processed: 1,
       items: [],
       is_active: true,
     });

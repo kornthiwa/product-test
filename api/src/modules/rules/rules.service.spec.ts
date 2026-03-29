@@ -141,7 +141,7 @@ describe('RulesService', () => {
       effective_from: { $lte: quoteAt },
       effective_to: { $gte: quoteAt },
     });
-    expect(chain.sort).toHaveBeenCalledWith({ priority: -1, _id: -1 });
+    expect(chain.sort).toHaveBeenCalledWith({ priority: -1 });
     expect(res).toEqual([{ id: 2 }, { id: 1 }]);
   });
 

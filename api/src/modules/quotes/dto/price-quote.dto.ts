@@ -22,7 +22,6 @@ export class PriceQuoteLineDto {
   @Type(() => Number)
   quantity!: number;
 
-  /** ระยะทางจัดส่ง (km) — ใช้กับกฎ RemoteAreaSurcharge */
   @IsOptional()
   @IsNumber()
   @Min(0)

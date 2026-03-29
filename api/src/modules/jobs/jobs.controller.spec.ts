@@ -49,16 +49,14 @@ describe('JobsController', () => {
   it('create() should create a new job', async () => {
     jobsService.create.mockResolvedValue({
       jobId: '1',
-      status: 'queued',
-      total: 1,
-      processed: 0,
+      status: 'completed',
       items: [
         {
           index: 0,
           productId: 'SKU-001',
           quantity: 1,
-          status: 'pending',
-          finalPrice: 0,
+          status: 'success',
+          finalPrice: 100,
           appliedRules: [],
         },
       ],

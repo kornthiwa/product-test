@@ -3,8 +3,6 @@
     "jobId": "1",
     "is_active": true,
     "status": "completed",
-    "total": 2,
-    "processed": 2,
     "items": [
       {
         "index": 0,
@@ -28,8 +26,6 @@
     "jobId": "2",
     "is_active": true,
     "status": "queued",
-    "total": 1,
-    "processed": 0,
     "items": [
       {
         "index": 0,
@@ -45,8 +41,6 @@
     "jobId": "3",
     "is_active": true,
     "status": "processing",
-    "total": 1,
-    "processed": 0,
     "items": [
       {
         "index": 0,
@@ -62,8 +56,7 @@
     "jobId": "4",
     "is_active": true,
     "status": "failed",
-    "total": 1,
-    "processed": 1,
+    "distanceKm": 120,
     "items": [
       {
         "index": 0,
@@ -79,8 +72,7 @@
     "jobId": "5",
     "is_active": true,
     "status": "completed",
-    "total": 1,
-    "processed": 1,
+    "distanceKm": 85,
     "items": [
       {
         "index": 0,
@@ -96,8 +88,6 @@
     "jobId": "6",
     "is_active": true,
     "status": "queued",
-    "total": 1,
-    "processed": 0,
     "items": [
       {
         "index": 0,
@@ -113,8 +103,7 @@
     "jobId": "7",
     "is_active": true,
     "status": "processing",
-    "total": 1,
-    "processed": 0,
+    "distanceKm": 62,
     "items": [
       {
         "index": 0,
@@ -130,8 +119,6 @@
     "jobId": "8",
     "is_active": true,
     "status": "completed",
-    "total": 1,
-    "processed": 1,
     "items": [
       {
         "index": 0,
@@ -147,8 +134,6 @@
     "jobId": "9",
     "is_active": true,
     "status": "failed",
-    "total": 1,
-    "processed": 1,
     "items": [
       {
         "index": 0,
@@ -164,8 +149,7 @@
     "jobId": "10",
     "is_active": true,
     "status": "queued",
-    "total": 1,
-    "processed": 0,
+    "distanceKm": 40,
     "items": [
       {
         "index": 0,
@@ -181,8 +165,7 @@
     "jobId": "11",
     "is_active": true,
     "status": "completed",
-    "total": 1,
-    "processed": 1,
+    "distanceKm": 55,
     "items": [
       {
         "index": 0,
@@ -198,8 +181,6 @@
     "jobId": "12",
     "is_active": true,
     "status": "processing",
-    "total": 1,
-    "processed": 0,
     "items": [
       {
         "index": 0,
@@ -215,8 +196,6 @@
     "jobId": "13",
     "is_active": true,
     "status": "completed",
-    "total": 1,
-    "processed": 1,
     "items": [
       {
         "index": 0,
@@ -232,8 +211,6 @@
     "jobId": "14",
     "is_active": true,
     "status": "queued",
-    "total": 1,
-    "processed": 0,
     "items": [
       {
         "index": 0,
@@ -249,8 +226,7 @@
     "jobId": "15",
     "is_active": true,
     "status": "completed",
-    "total": 1,
-    "processed": 1,
+    "distanceKm": 95,
     "items": [
       {
         "index": 0,

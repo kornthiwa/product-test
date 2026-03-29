@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   ConflictException,
   Injectable,
   NotFoundException,
@@ -11,6 +12,9 @@ import { GetListJobDto, GetJobListResponse } from './dto/get-job.dto';
 import { UpdateJobDto } from './dto/update-job.dto';
 import { Job, JobDocument, JobItemStatus } from './entities/job.entity';
 import { RedisService } from '../../shared/redis/redis.service';
+import { RulesService } from '../rules/rules.service';
+import { ProductsService } from '../products/products.service';
+import { computePriceLine } from '../quotes/quote-pricing';
 import * as fs from 'fs/promises';
 
 @Injectable()
@@ -20,6 +24,8 @@ export class JobsService {
   constructor(
     @InjectModel(Job.name) private readonly jobModel: Model<JobDocument>,
     private readonly redisService: RedisService,
+    private readonly rulesService: RulesService,
+    private readonly productsService: ProductsService,
   ) {}
 
   async findWithQuery(query: QueryFilter<JobDocument>): Promise<Job[]> {
@@ -58,20 +64,57 @@ export class JobsService {
       throw new ConflictException(`Job with jobId ${jobId} already exists`);
     }
 
-    const items = createJobDto.items.map((item, idx) => ({
-      index: item.index ?? idx,
-      productId: item.productId,
-      quantity: item.quantity,
-      status: item.status ?? 'pending',
-      finalPrice: item.finalPrice ?? 0,
-      appliedRules: item.appliedRules ?? [],
-    }));
+    const quoteAt = new Date();
+
+    const rulesForQuote = await this.rulesService.findWithQuery({
+      is_active: true,
+      effective_from: { $lte: quoteAt },
+      effective_to: { $gte: quoteAt },
+    });
+
+    const jobDistanceKm = createJobDto.distanceKm;
+
+    const items: Array<{
+      index: number;
+      productId: string;
+      quantity: number;
+      status: JobItemStatus;
+      finalPrice: number;
+      appliedRules: number[];
+    }> = [];
+
+    for (let idx = 0; idx < createJobDto.items.length; idx++) {
+      const item = createJobDto.items[idx];
+      const product = await this.productsService.findOne(item.productId);
+      if (!product.is_active) {
+        throw new BadRequestException(
+          `Product ${item.productId} is not available for pricing`,
+        );
+      }
+
+      const { finalPrice, appliedRuleIds } = computePriceLine({
+        unitPrice: product.price,
+        unitWeightKg: product.weight,
+        quantity: item.quantity,
+        quoteAt,
+        distanceKm: jobDistanceKm,
+        rules: rulesForQuote,
+      });
+
+      items.push({
+        index: item.index ?? idx,
+        productId: item.productId,
+        quantity: item.quantity,
+        status: 'success',
+        finalPrice,
+        appliedRules: appliedRuleIds,
+      });
+    }
 
     const doc = await this.jobModel.create({
       jobId,
-      status: createJobDto.status ?? 'queued',
-      total: items.length,
-      processed: 0,
+      status: 'completed',
+      ...(jobDistanceKm != null && { distanceKm: jobDistanceKm }),
       items,
       is_active: createJobDto.is_active ?? true,
     });
@@ -154,8 +197,7 @@ export class JobsService {
             $set: {
               jobId: raw.jobId,
               status: raw.status ?? 'queued',
-              total: raw.total ?? items.length,
-              processed: raw.processed ?? 0,
+              ...(raw.distanceKm != null && { distanceKm: raw.distanceKm }),
               items,
               is_active: raw.is_active ?? true,
             },

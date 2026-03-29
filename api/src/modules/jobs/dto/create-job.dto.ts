@@ -1,7 +1,8 @@
-import { Transform, Type } from 'class-transformer';
+import { Type } from 'class-transformer';
 import {
   IsArray,
   IsBoolean,
+  IsDateString,
   IsEnum,
   IsInt,
   IsNotEmpty,
@@ -34,18 +35,6 @@ export class CreateJobItemDto {
   @IsOptional()
   @IsEnum(ITEM_STATUSES)
   status?: (typeof ITEM_STATUSES)[number];
-
-  @IsOptional()
-  @Type(() => Number)
-  @IsNumber()
-  @Min(0)
-  finalPrice?: number;
-
-  @IsOptional()
-  @IsArray()
-  @IsInt({ each: true })
-  @Min(1, { each: true })
-  appliedRules?: number[];
 }
 
 export class CreateJobDto {
@@ -64,12 +53,12 @@ export class CreateJobDto {
   items!: CreateJobItemDto[];
 
   @IsOptional()
-  @IsBoolean()
-  is_active?: boolean;
+  @Type(() => Number)
+  @IsNumber()
+  @Min(0)
+  distanceKm?: number;
 
   @IsOptional()
-  @Type(() => Number)
-  @IsInt()
-  @Min(0)
-  processed?: number;
+  @IsBoolean()
+  is_active?: boolean;
 }
