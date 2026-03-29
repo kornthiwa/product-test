@@ -25,6 +25,7 @@ export class JobsController {
 
   @Get()
   async findAllList(@Query() dto: GetListJobDto): Promise<GetJobListResponse> {
+    console.log(dto);
     return await this.jobsService.findAllList(dto);
   }
 

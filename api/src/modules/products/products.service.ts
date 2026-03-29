@@ -58,7 +58,7 @@ export class ProductsService {
         .find()
         .skip(skip)
         .limit(pageSize)
-        .sort({ id: 1 })
+        .sort({ id: -1 })
         .lean(),
     ]);
 

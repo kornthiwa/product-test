@@ -48,7 +48,7 @@ export class JobsService {
         .find()
         .skip(skip)
         .limit(pageSize)
-        .sort({ createdAt: -1, jobId: 1 })
+        .sort({ jobId: -1 })
         .lean(),
     ]);
 

@@ -33,12 +33,7 @@ export class RulesService {
 
     const [total, items] = await Promise.all([
       this.ruleModel.countDocuments(),
-      this.ruleModel
-        .find()
-        .skip(skip)
-        .limit(pageSize)
-        .sort({ priority: -1, _id: -1 })
-        .lean(),
+      this.ruleModel.find().skip(skip).limit(pageSize).sort({ id: -1 }).lean(),
     ]);
 
     const res: GetRuleDtoResponse = { page, pageSize, total, data: items };
