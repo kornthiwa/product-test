@@ -10,11 +10,11 @@ describe('JobsController', () => {
 
   const jobsService = {
     findAllList: jest.fn(),
-    findOne: jest.fn().mockResolvedValue({ jobId: '1' }),
-    create: jest.fn().mockResolvedValue({ jobId: '1' }),
-    update: jest.fn().mockResolvedValue({ jobId: '1' }),
+    findOne: jest.fn().mockResolvedValue({ jobId: 1 }),
+    create: jest.fn().mockResolvedValue({ jobId: 1 }),
+    update: jest.fn().mockResolvedValue({ jobId: 1 }),
     syncJsonData: jest.fn().mockResolvedValue(undefined),
-    remove: jest.fn().mockResolvedValue({ jobId: '1', is_active: false }),
+    remove: jest.fn().mockResolvedValue({ jobId: 1, is_active: false }),
   };
 
   beforeEach(async () => {
@@ -31,7 +31,7 @@ describe('JobsController', () => {
       page: 1,
       pageSize: 10,
       total: 4,
-      data: [{ jobId: '1' }],
+      data: [{ jobId: 1 }],
     });
 
     const dto = { page: 1, pageSize: 10 } as GetListJobDto;
@@ -42,13 +42,13 @@ describe('JobsController', () => {
       page: 1,
       pageSize: 10,
       total: 4,
-      data: [{ jobId: '1' }],
+      data: [{ jobId: 1 }],
     });
   });
 
   it('create() should create a new job', async () => {
     jobsService.create.mockResolvedValue({
-      jobId: '1',
+      jobId: 1,
       status: 'completed',
       items: [
         {
@@ -69,7 +69,7 @@ describe('JobsController', () => {
 
     const result = await controller.create(dto);
     expect(jobsService.create).toHaveBeenCalledWith(dto);
-    expect(result.jobId).toBe('1');
+    expect(result.jobId).toBe(1);
     expect(result.is_active).toBe(true);
   });
 
@@ -80,21 +80,21 @@ describe('JobsController', () => {
   });
 
   it('findOne() should return a job', async () => {
-    const result = await controller.findOne('1');
-    expect(jobsService.findOne).toHaveBeenCalledWith('1');
-    expect(result).toEqual({ jobId: '1' });
+    const result = await controller.findOne(1);
+    expect(jobsService.findOne).toHaveBeenCalledWith(1);
+    expect(result).toEqual({ jobId: 1 });
   });
 
   it('update() should update a job', async () => {
     const dto = { status: 'completed' } as UpdateJobDto;
-    const result = await controller.update('1', dto);
-    expect(jobsService.update).toHaveBeenCalledWith('1', dto);
-    expect(result).toEqual({ jobId: '1' });
+    const result = await controller.update(1, dto);
+    expect(jobsService.update).toHaveBeenCalledWith(1, dto);
+    expect(result).toEqual({ jobId: 1 });
   });
 
   it('remove() should soft-delete a job', async () => {
-    const result = await controller.remove('1');
-    expect(jobsService.remove).toHaveBeenCalledWith('1');
-    expect(result).toEqual({ jobId: '1', is_active: false });
+    const result = await controller.remove(1);
+    expect(jobsService.remove).toHaveBeenCalledWith(1);
+    expect(result).toEqual({ jobId: 1, is_active: false });
   });
 });

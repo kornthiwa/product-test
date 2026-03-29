@@ -67,23 +67,23 @@ export class QuotesService {
   }
 
   async bulkQuotes(data: Job[]): Promise<BulkQuoteDtoResponse> {
-    const quotes = await Promise.all(
-      data.map((job) =>
-        this.jobs.create({
-          is_active: job.is_active,
-          status: job.status,
-          distanceKm: job.distanceKm,
-          items: job.items.map((item) => ({
-            index: item.index,
-            productId: item.productId,
-            quantity: item.quantity,
-            status: item.status,
-            finalPrice: item.finalPrice,
-            appliedRules: item.appliedRules,
-          })),
-        }),
-      ),
-    );
+    const quotes: BulkQuoteDtoResponse['data'] = [];
+    for (const job of data) {
+      const quote = await this.jobs.create({
+        is_active: job.is_active,
+        status: job.status,
+        distanceKm: job.distanceKm,
+        items: job.items.map((item) => ({
+          index: item.index,
+          productId: item.productId,
+          quantity: item.quantity,
+          status: item.status,
+          finalPrice: item.finalPrice,
+          appliedRules: item.appliedRules,
+        })),
+      });
+      quotes.push(quote);
+    }
     return { data: quotes };
   }
 }
