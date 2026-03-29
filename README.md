@@ -15,15 +15,15 @@
 
 ## เทคโนโลยี
 
-| ส่วน | รายการ |
-|------|--------|
-| Runtime | Node.js 20+ |
-| Framework | NestJS 11 |
-| Validation | `class-validator`, `class-transformer`, `ValidationPipe` (global) |
-| ฐานข้อมูล | MongoDB + Mongoose (`@nestjs/mongoose`) |
-| แคช | Redis (`ioredis`) |
-| ทดสอบ | Jest, Supertest, `@nestjs/testing` |
-| คอนเทนเนอร์ | Docker Compose (`api`, `mongo`, `redis`) |
+| ส่วน        | รายการ                                                            |
+| ----------- | ----------------------------------------------------------------- |
+| Runtime     | Node.js 20+                                                       |
+| Framework   | NestJS 11                                                         |
+| Validation  | `class-validator`, `class-transformer`, `ValidationPipe` (global) |
+| ฐานข้อมูล   | MongoDB + Mongoose (`@nestjs/mongoose`)                           |
+| แคช         | Redis (`ioredis`)                                                 |
+| ทดสอบ       | Jest, Supertest, `@nestjs/testing`                                |
+| คอนเทนเนอร์ | Docker Compose (`api`, `mongo`, `redis`)                          |
 
 > โปรเจกต์นี้ **ไม่ได้** ติดตั้ง Swagger/OpenAPI ใน `package.json` ปัจจุบัน
 
@@ -105,13 +105,19 @@ docker compose down
 
 ## ตัวแปรสภาพแวดล้อม
 
-| ตัวแปร | ความหมาย | ค่าเริ่มต้น (ถ้าไม่ตั้ง) |
-|--------|-----------|---------------------------|
-| `PORT` | พอร์ต HTTP | `3000` |
+| ตัวแปร      | ความหมาย        | ค่าเริ่มต้น (ถ้าไม่ตั้ง)                     |
+| ----------- | --------------- | -------------------------------------------- |
+| `PORT`      | พอร์ต HTTP      | `3000`                                       |
 | `MONGO_URI` | URI ของ MongoDB | `mongodb://localhost:27017/pricing_platform` |
-| `REDIS_URL` | URI ของ Redis | `redis://localhost:6379` |
+| `REDIS_URL` | URI ของ Redis   | `redis://localhost:6379`                     |
 
 > อย่า commit ไฟล์ `.env` ที่มีข้อมูลจริงขององค์กร
+
+---
+
+## Postman
+
+นำเข้า [api/postman/Pricing-Platform.postman_collection.json](api/postman/Pricing-Platform.postman_collection.json) ใน Postman (Import → เลือกไฟล์) แล้วปรับ collection variable **`baseUrl`** ถ้ารันคนละพอร์ต/โฮสต์ แนะนำรันคำขอ **Rules → Sync from JSON** และ **Products → Sync from JSON** ก่อนทดสอบ quote/job
 
 ---
 
@@ -129,14 +135,14 @@ docker compose down
 
 ### Rules
 
-| Method | Path | คำอธิบาย |
-|--------|------|----------|
-| `GET` | `/rules` | รายการแบบแบ่งหน้า (`page`, `pageSize`) เรียง `priority` มากไปน้อย แคช Redis ~30 วินาที |
-| `GET` | `/rules/syncjson` | อ่าน `data/rules.json` แล้ว upsert เข้า MongoDB, bump เวอร์ชันแคช |
-| `GET` | `/rules/:id` | ดูกฎตาม `id` (ตัวเลข) |
-| `POST` | `/rules` | สร้างกฎ (`id` สร้างอัตโนมัติจากลำดับล่าสุด) |
-| `PATCH` | `/rules/:id` | แก้ไขกฎ |
-| `DELETE` | `/rules/:id` | **ปิดใช้งาน** (soft delete: ตั้ง `is_active: false`) |
+| Method   | Path              | คำอธิบาย                                                                               |
+| -------- | ----------------- | -------------------------------------------------------------------------------------- |
+| `GET`    | `/rules`          | รายการแบบแบ่งหน้า (`page`, `pageSize`) เรียง `priority` มากไปน้อย แคช Redis ~30 วินาที |
+| `GET`    | `/rules/syncjson` | อ่าน `data/rules.json` แล้ว upsert เข้า MongoDB, bump เวอร์ชันแคช                      |
+| `GET`    | `/rules/:id`      | ดูกฎตาม `id` (ตัวเลข)                                                                  |
+| `POST`   | `/rules`          | สร้างกฎ (`id` สร้างอัตโนมัติจากลำดับล่าสุด)                                            |
+| `PATCH`  | `/rules/:id`      | แก้ไขกฎ                                                                                |
+| `DELETE` | `/rules/:id`      | **ปิดใช้งาน** (soft delete: ตั้ง `is_active: false`)                                   |
 
 Query สำหรับรายการ:
 
@@ -175,8 +181,8 @@ Query สำหรับรายการ:
 
 ### Quotes (คำนวณราคาทันที)
 
-| Method | Path | คำอธิบาย |
-|--------|------|----------|
+| Method | Path            | คำอธิบาย                                     |
+| ------ | --------------- | -------------------------------------------- |
 | `POST` | `/quotes/price` | คำนวณราคาจาก `items` + กฎที่มีผล ณ `quoteAt` |
 
 ตัวอย่าง payload:

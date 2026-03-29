@@ -1,0 +1,307 @@
+{
+  "info": {
+    "name": "Pricing Platform API",
+    "description": "NestJS pricing rules, quotes, jobs, and products.\n\n**Setup:** Start API (`yarn start:dev` or Docker). Run **Rules → Sync from JSON** and **Products → Sync from JSON** (and **Jobs → Sync from JSON** if you need seed jobs) before pricing calls.\n\nOptional header `X-Correlation-Id` (any string) for request tracing if your server supports it.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "jobId",
+      "value": "postman-demo-job"
+    },
+    {
+      "key": "ruleId",
+      "value": "1"
+    },
+    {
+      "key": "productId",
+      "value": "SKU-001"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "GET Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/health",
+            "description": "Liveness check."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Rules",
+      "item": [
+        {
+          "name": "List rules (paginated)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/rules?page=1&pageSize=10",
+            "description": "Query: `page`, `pageSize` (optional)."
+          },
+          "response": []
+        },
+        {
+          "name": "Sync from JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/rules/syncjson",
+            "description": "Upserts `data/rules.json` into MongoDB."
+          },
+          "response": []
+        },
+        {
+          "name": "Get rule by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/rules/{{ruleId}}",
+            "description": "`id` is numeric rule id from data store."
+          },
+          "response": []
+        },
+        {
+          "name": "Create rule",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Postman test promo\",\n  \"type\": \"TimeWindowPromotion\",\n  \"method\": \"discount\",\n  \"type_value\": \"percent\",\n  \"value\": 5,\n  \"priority\": 50,\n  \"effective_from\": \"2026-01-01T00:00:00.000Z\",\n  \"effective_to\": \"2026-12-31T23:59:59.000Z\",\n  \"is_active\": true,\n  \"time_window_start\": \"11:00\",\n  \"time_window_end\": \"14:00\"\n}\n"
+            },
+            "url": "{{baseUrl}}/rules",
+            "description": "`type`: TimeWindowPromotion | RemoteAreaSurcharge | WeightTier. `method`: discount | surcharge. `type_value`: percent | amount."
+          },
+          "response": []
+        },
+        {
+          "name": "Update rule",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Postman test promo (updated)\",\n  \"value\": 7\n}\n"
+            },
+            "url": "{{baseUrl}}/rules/{{ruleId}}",
+            "description": "Partial update; send only fields to change."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete rule (soft)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/rules/{{ruleId}}",
+            "description": "Soft delete: sets `is_active: false`."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "List products",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/products?page=1&pageSize=20"
+          },
+          "response": []
+        },
+        {
+          "name": "Sync from JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/products/syncjson",
+            "description": "Upserts `data/products.json`."
+          },
+          "response": []
+        },
+        {
+          "name": "Get product by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/products/{{productId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Create product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"SKU-POSTMAN-001\",\n  \"name\": \"Postman sample SKU\",\n  \"price\": 199,\n  \"weight\": 1.2,\n  \"is_active\": true\n}\n"
+            },
+            "url": "{{baseUrl}}/products"
+          },
+          "response": []
+        },
+        {
+          "name": "Update product",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"price\": 189\n}\n"
+            },
+            "url": "{{baseUrl}}/products/SKU-POSTMAN-001"
+          },
+          "response": []
+        },
+        {
+          "name": "Delete product (soft)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/products/SKU-POSTMAN-001"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Quotes",
+      "item": [
+        {
+          "name": "POST Price quote",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"quoteAt\": \"2026-03-29T10:00:00.000Z\",\n  \"items\": [\n    { \"productId\": \"SKU-001\", \"quantity\": 2 },\n    { \"productId\": \"SKU-005\", \"quantity\": 1, \"distanceKm\": 85 }\n  ]\n}\n"
+            },
+            "url": "{{baseUrl}}/quotes/price",
+            "description": "Instant quote. Each line: `productId`, `quantity` (required); optional `distanceKm` per line for remote surcharges. Optional top-level `quoteAt` (ISO date string)."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Jobs",
+      "item": [
+        {
+          "name": "List jobs",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/jobs?page=1&pageSize=10"
+          },
+          "response": []
+        },
+        {
+          "name": "Sync from JSON",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/jobs/syncjson",
+            "description": "Upserts `data/jobs.json`."
+          },
+          "response": []
+        },
+        {
+          "name": "Create job (priced)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jobId\": \"{{jobId}}\",\n  \"distanceKm\": 75,\n  \"items\": [\n    { \"productId\": \"SKU-001\", \"quantity\": 2 },\n    { \"productId\": \"SKU-003\", \"quantity\": 1 }\n  ]\n}\n"
+            },
+            "url": "{{baseUrl}}/jobs",
+            "description": "Required: `items[]` with `productId`, `quantity`. Optional: `jobId` (server generates UUID if omitted), `distanceKm` (job-level for pricing), `status`, `is_active`."
+          },
+          "response": []
+        },
+        {
+          "name": "Get job by jobId",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/jobs/{{jobId}}"
+          },
+          "response": []
+        },
+        {
+          "name": "Update job",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"completed\",\n  \"is_active\": true\n}\n"
+            },
+            "url": "{{baseUrl}}/jobs/{{jobId}}",
+            "description": "Partial update."
+          },
+          "response": []
+        },
+        {
+          "name": "Delete job",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/jobs/{{jobId}}"
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
