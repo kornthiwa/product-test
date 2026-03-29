@@ -18,7 +18,7 @@ export class RulesService {
   ) {}
 
   async findWithQuery(query: QueryFilter<RuleDocument>): Promise<Rule[]> {
-    return this.ruleModel.find(query).sort({ jobId: 1 }).lean();
+    return this.ruleModel.find(query).sort({ priority: -1 }).lean();
   }
 
   async findAllList(dto: GetListRuleDto): Promise<GetRuleDtoResponse> {

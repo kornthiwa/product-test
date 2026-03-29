@@ -125,6 +125,26 @@ describe('RulesService', () => {
     );
   });
 
+  it('findWithQuery() sorts by priority desc', async () => {
+    const quoteAt = new Date('2026-06-01T12:00:00.000Z');
+    const chain = createQueryChain([{ id: 2 }, { id: 1 }]);
+    ruleModel.find.mockReturnValue(chain);
+
+    const res = await service.findWithQuery({
+      is_active: true,
+      effective_from: { $lte: quoteAt },
+      effective_to: { $gte: quoteAt },
+    });
+
+    expect(ruleModel.find).toHaveBeenCalledWith({
+      is_active: true,
+      effective_from: { $lte: quoteAt },
+      effective_to: { $gte: quoteAt },
+    });
+    expect(chain.sort).toHaveBeenCalledWith({ priority: -1, _id: -1 });
+    expect(res).toEqual([{ id: 2 }, { id: 1 }]);
+  });
+
   it('findAllList() should use default page/pageSize when not provided', async () => {
     redisService.getInt.mockResolvedValue(1);
     redisService.getJson.mockResolvedValue(null);

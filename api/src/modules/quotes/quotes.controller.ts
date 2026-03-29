@@ -1,4 +1,4 @@
-import { Body, Controller, HttpCode, HttpStatus, Post } from '@nestjs/common';
+import { Body, Controller, Post } from '@nestjs/common';
 import { PriceQuoteDto, PriceQuoteResponse } from './dto/price-quote.dto';
 import { QuotesService } from './quotes.service';
 
@@ -7,7 +7,9 @@ export class QuotesController {
   constructor(private readonly quotesService: QuotesService) {}
 
   @Post('price')
-  async price(@Body() dto: PriceQuoteDto): Promise<PriceQuoteResponse> {
-    return this.quotesService.priceQuote(dto);
+  async computePriceQuote(
+    @Body() dto: PriceQuoteDto,
+  ): Promise<PriceQuoteResponse> {
+    return this.quotesService.computePriceQuote(dto);
   }
 }

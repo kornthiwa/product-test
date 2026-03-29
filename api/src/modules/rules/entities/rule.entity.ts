@@ -57,6 +57,25 @@ export class Rule {
 
   @Prop({ required: true, description: 'ชื่อของกฎ' })
   name!: string;
+
+  @Prop({ required: false, description: 'ช่วงเวลาเริ่มต้น (UTC) "HH:mm"' })
+  time_window_start?: string;
+
+  @Prop({ required: false, description: 'ช่วงเวลาสิ้นสุด (UTC) "HH:mm"' })
+  time_window_end?: string;
+
+  @Prop({ required: false, min: 0, description: 'ระยะทางขั้นต่ำ (km)' })
+  min_distance_km?: number;
+
+  @Prop({ required: false, min: 0, description: 'ระยะทางขั้นสุด (km)' })
+  max_distance_km?: number;
+
+  @Prop({
+    required: false,
+    min: 0,
+    description: 'น้ำหนักรวมขั้นต่ำ (kg) ต่อบรรทัด',
+  })
+  min_total_weight_kg?: number;
 }
 
 export const RuleSchema = SchemaFactory.createForClass(Rule);

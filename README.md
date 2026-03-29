@@ -8,7 +8,8 @@
 
 - **Rules:** CRUD กฎราคา, ซิงก์จาก `data/rules.json` เข้าฐานข้อมูล, รายการแบบแบ่งหน้าพร้อมแคช Redis
 - **Health:** ตรวจว่าเซอร์วิสทำงาน
-- **Quotes / Jobs:** โมดูลที่สร้างจาก Nest CLI ยังเป็นตัวยึดที่ (placeholder) — ยังไม่มี pricing engine หรือ bulk job ตามสเปกเดิม
+- **Quotes:** `POST /quotes/price` คำนวณราคาจาก payload + กฎ (ดูตัวอย่างด้านล่าง)
+- **Jobs:** โมดูลจัดการงาน — bulk quote ตามสเปกเต็มยังพัฒนาต่อได้
 
 ---
 
@@ -41,7 +42,7 @@ product/
    │  ├─ app.controller.ts   # GET /health
    │  ├─ modules/
    │  │  ├─ rules/           # กฎราคา (หลัก)
-   │  │  ├─ quotes/          # scaffold
+   │  │  ├─ quotes/          # POST /quotes/price
    │  │  └─ jobs/            # scaffold
    │  └─ shared/redis/       # RedisModule + RedisService
    ├─ test/
@@ -172,9 +173,35 @@ Query สำหรับรายการ:
 }
 ```
 
-### Quotes / Jobs
+### Quotes (คำนวณราคาทันที)
 
-`POST/GET/PATCH/DELETE` ที่ `/quotes` และ `/jobs` ยังคืนข้อความ placeholder จาก Nest scaffold — ยังไม่เชื่อม pricing engine
+| Method | Path | คำอธิบาย |
+|--------|------|----------|
+| `POST` | `/quotes/price` | คำนวณราคาจาก `items` + กฎที่มีผล ณ `quoteAt` |
+
+ตัวอย่าง payload:
+
+```json
+{
+  "quoteAt": "2026-03-29T10:00:00.000Z",
+  "items": [
+    { "productId": "SKU-014", "quantity": 1 },
+    { "productId": "SKU-001", "quantity": 3 },
+    { "productId": "SKU-002", "quantity": 2 },
+    { "productId": "SKU-005", "quantity": 4 },
+    { "productId": "SKU-010", "quantity": 1, "distanceKm": 85 },
+    { "productId": "SKU-012", "quantity": 2 },
+    { "productId": "SKU-015", "quantity": 5 }
+  ]
+}
+```
+
+- แต่ละบรรทัดมี `productId`, `quantity` (บังคับ); ออปชัน `distanceKm` สำหรับกฎ `RemoteAreaSurcharge` (ตัวอย่างบรรทัด `SKU-010` ใช้ทดสอบช่วงระยะ ~50–120 km ใน `rules.json`)
+- ต้องมีสินค้าใน MongoDB (เช่น sync จาก `api/data/products.json`) และกฎที่ sync แล้ว
+
+### Jobs
+
+`GET/POST/PATCH/DELETE` ที่ `/jobs` — จัดการงาน bulk / สถานะตามโมดูล jobs
 
 ---
 
@@ -209,7 +236,6 @@ E2E (`test/app.e2e-spec.ts`) ครอบคลุม `/health`, rules list/deta
 
 ## สิ่งที่อาจพัฒนาต่อ (จากสเปกเดิม)
 
-- Pricing engine + `POST /quotes/price` คำนวณจากกฎจริง
 - Bulk quote + job tracking (`job_id`, สถานะ queued/completed)
 - Swagger ที่ `/docs`, structured logging + `trace_id`
 - ปรับ quotes/jobs ให้สอดคล้องโดเมน
